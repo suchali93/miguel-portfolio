@@ -83,7 +83,6 @@ section {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-weight: 700;
   font-family: 'Montserrat'; }
   #mainNav .navbar-brand {
     color: #fff; }
@@ -118,7 +117,7 @@ section {
       margin-top: 0; }
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
       color: #fff;
-      background: #18BC9C; }
+      background: rgba(0,0,0,0.4); }
       #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
         color: #fff;
         background: #18BC9C; }
@@ -262,7 +261,7 @@ a {
   background-color: #18BC9C !important; }
 
 .bg-secondary {
-  background-color: #2C3E50 !important; }
+  background-color: #76323F !important; }
 
 .text-primary {
   color: #18BC9C !important; }
