@@ -84,6 +84,10 @@ section {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: 'Montserrat'; }
+  #mainNav .navbar-brand-logo > img {
+    width: 48px;
+    height: 48px;
+    margin-right: 20px; }
   #mainNav .navbar-brand {
     color: #fff; }
   #mainNav .navbar-nav {
@@ -103,8 +107,8 @@ section {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s; }
@@ -122,8 +126,8 @@ section {
         color: #fff;
         background: #18BC9C; }
   #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem; }
     #mainNav.navbar-shrink .navbar-brand {
       font-size: 1.5em; } }
 
