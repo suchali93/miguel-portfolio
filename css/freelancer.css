@@ -83,6 +83,7 @@ section {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: #76323F;
   font-family: 'Montserrat'; }
   #mainNav .navbar-brand-logo > img {
     width: 3.7rem;
@@ -107,6 +108,7 @@ section {
   #mainNav {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
+    background: rgba(0,0,0,0.3);
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s, background-color 0.3s; }
