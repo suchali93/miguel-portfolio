@@ -294,8 +294,25 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
+    <!-- <script src="js/contact_me.js"></script> -->
+    <script type="text/javascript">
+    $(function () {
+        $("#contactForm input,#contactForm textarea").not("[type=submit]").jqBootstrapValidation({
+            submitSuccess: function($form, event) {
+                console.log("Success");
+                var name = $("input.formName").val();
+                $("#sendMessageButton").attr("disabled", false);
+                $('#success').html("<div class='alert alert-success'>");
+                $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+                $('#success > .alert-success').append("<strong>Thank you, " + name + "! Your message has been sent. I will be in touch soon.</strong>");
+                $('#success > .alert-success').append('</div>');
+            }
+        });
+        //clear all fields
+        // $(".form-group").removeClass("floating-label-form-group-with-value");
+        // $('#contactForm').trigger("reset");
+    });
+    </script>
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
 
