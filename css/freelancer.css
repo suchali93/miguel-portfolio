@@ -84,8 +84,6 @@ section {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: 'Montserrat'; }
-  #mainNav .container {
-    }
   #mainNav .navbar-brand-logo > img {
     width: 3.7rem;
     height: 3rem;
@@ -102,6 +100,8 @@ section {
   #mainNav .navbar-toggler {
     font-size: 130%;
     padding: 0.2rem; }
+  #mainNav.navbar-shrink {
+    background-color: #76323F; }
 
 @media (min-width: 992px) {
   #mainNav {
@@ -109,7 +109,7 @@ section {
     padding-bottom: 0.7rem;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s; }
+    transition: padding-top 0.3s, padding-bottom 0.3s, background-color 0.3s; }
     #mainNav .navbar-brand-logo > img {
       margin-right: 1.2rem; }
     #mainNav .navbar-brand {
@@ -263,10 +263,10 @@ a {
   border-width: 2px; }
 
 .bg-primary {
-  background-color: #18BC9C !important; }
+  background-color: #D7CEC7 !important; }
 
 .bg-secondary {
-  background-color: #76323F !important; }
+  background-color: #fff !important; }
 
 .text-primary {
   color: #18BC9C !important; }
