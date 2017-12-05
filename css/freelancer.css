@@ -97,12 +97,8 @@ section {
     letter-spacing: 0.0625rem; }
     #mainNav .navbar-nav li.nav-item a.nav-link {
       color: #fff; }
-      #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-        color: #D8BFBF; }
-      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+      #mainNav .navbar-nav li.nav-item a.nav-link:hover, #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
         color: #fff; }
-      #mainNav .navbar-nav li.nav-item a.nav-link.active {
-        color: #18BC9C; }
   #mainNav .navbar-toggler {
     font-size: 130%;
     padding: 0.2rem; }
