@@ -174,7 +174,7 @@
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
-                  <input class="form-control" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control nameField" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -300,7 +300,7 @@
         $("#contactForm input,#contactForm textarea").not("[type=submit]").jqBootstrapValidation({
             submitSuccess: function($form, event) {
                 console.log("Success");
-                var name = $("input.formName").val();
+                var name = $("input.nameField").val();
                 $("#sendMessageButton").attr("disabled", false);
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
