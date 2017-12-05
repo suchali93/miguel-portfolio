@@ -187,7 +187,7 @@ header.masthead {
 
 .floating-label-form-group {
   position: relative;
-  border-bottom: 1px solid #e9ecef; }
+  border-bottom: 1px solid #E9ECEF; }
   .floating-label-form-group input,
   .floating-label-form-group textarea {
     font-size: 1.5em;
@@ -217,7 +217,7 @@ header.masthead {
     opacity: 0; }
   .floating-label-form-group:not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid #e9ecef; }
+    border-left: 1px solid #E9ECEF; }
 
 .floating-label-form-group-with-value label {
   top: 0;
@@ -227,21 +227,21 @@ header.masthead {
   color: #18BC9C; }
 
 form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #e9ecef; }
+  border-top: 1px solid #E9ECEF; }
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #2C3E50;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #2B2B2B;
   color: #fff; }
 
 .copyright {
-  background-color: #1a252f; }
+  background-color: #1F1F1F; }
 
 a {
   color: #18BC9C; }
   a:focus, a:hover, a:active {
-    color: #128f76; }
+    color: #128F76; }
 
 .btn {
   border-width: 2px; }
@@ -262,12 +262,12 @@ a {
   background-color: #18BC9C;
   border-color: #18BC9C; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #128f76;
-    border-color: #128f76; }
+    background-color: #128F76;
+    border-color: #128F76; }
 
 .btn-secondary {
   background-color: #2C3E50;
   border-color: #2C3E50; }
   .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-    background-color: #1a252f;
-    border-color: #1a252f; }
+    background-color: #1A252F;
+    border-color: #1A252F; }
