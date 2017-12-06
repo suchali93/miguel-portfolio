@@ -170,7 +170,7 @@
             Email = entry.1045781291
             Message = entry.1065046570
             -->
-            <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse" target="hidden_iframe">
+            <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse?" target="hidden_iframe">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
@@ -198,6 +198,7 @@
                 <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
               </div>
             </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
           </div>
         </div>
       </div>
@@ -309,10 +310,11 @@
             }
         });
         //clear all fields
-        // $(".form-group").removeClass("floating-label-form-group-with-value");
-        // $('#contactForm').trigger("reset");
+        $(".form-group").removeClass("floating-label-form-group-with-value");
+        $('#contactForm').trigger("reset");
     });
     </script>
+
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
 
