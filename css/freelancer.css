@@ -12,34 +12,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
   font-family: 'Montserrat'; }
 
-hr.bar-light,
-hr.bar-dark {
+hr.hr-light,
+hr.hr-dark {
   max-width: 15rem;
   padding: 0;
   text-align: center;
   border: none;
-  border-top: solid 0.2rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem; }
+  border-top: solid 0.1rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem; }
 
-hr.bar-light {
+hr.hr-light {
   border-color: #fff; }
 
-hr.bar-dark {
+hr.hr-dark {
   border-color: #3C3C3C; }
 
 section {
   padding: 3rem 0; }
   section h2 {
-    font-size: 2.25rem;
-    line-height: 2rem; }
+    font-size: 1.6rem;
+    line-height: 1.6rem; }
   @media (min-width: 992px) {
     section h2 {
-      font-size: 3rem;
-      line-height: 2.5rem; } }
+      font-size: 2rem;
+      line-height: 2rem; } }
 
 .btn-xl {
   padding: 1rem 1.75rem;
@@ -65,7 +64,7 @@ section {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #76323F;
+  background-color: #265077;
   font-family: 'Montserrat'; }
   #mainNav .navbar-brand-logo > img {
     width: 3.7rem;
@@ -84,7 +83,7 @@ section {
     font-size: 130%;
     padding: 0.2rem; }
   #mainNav.navbar-shrink {
-    background-color: #76323F; }
+    background-color: #265077; }
 
 @media (min-width: 992px) {
   #mainNav {
@@ -97,7 +96,7 @@ section {
     #mainNav .navbar-brand-logo > img {
       margin-right: 1.2rem; }
     #mainNav .navbar-brand {
-      font-size: 2em;
+      font-size: 1.7em;
       margin-right: 1rem;
       -webkit-transition: font-size 0.3s;
       -moz-transition: font-size 0.3s;
@@ -185,19 +184,24 @@ header.masthead {
     .projects-modal .projects-modal-dialog h2 {
       font-size: 3rem; } }
 
+.contact {
+  background-color: #2B2B2B; }
+
 .floating-label-form-group {
-  position: relative;
-  border-bottom: 1px solid #E9ECEF; }
+  position: relative; }
+  .floating-label-form-group .form-control:focus {
+    background-color: #3C3C3C;
+    color: #CBCBCB;
+    border-color: #CBCBCB; }
   .floating-label-form-group input,
   .floating-label-form-group textarea {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    color: #CBCBCB;
     position: relative;
     z-index: 1;
-    padding-right: 0;
-    padding-left: 0;
     resize: none;
-    border: none;
-    border-radius: 0;
+    border: solid 0.15rem #495057;
+    border-radius: 0.1rem;
     background: none;
     box-shadow: none !important; }
   .floating-label-form-group label {
@@ -218,21 +222,25 @@ header.masthead {
   .floating-label-form-group:not(:first-child) {
     padding-left: 14px;
     border-left: 1px solid #E9ECEF; }
+  .floating-label-form-group .text-danger {
+    color: #A7475A !important; }
+      .floating-label-form-group .text-danger > ul {
+        padding-left: 0;
+        list-style-type: none; }
 
 .floating-label-form-group-with-value label {
   top: 0;
-  opacity: 1; }
+  opacity: 1;
+  color: #CBCBCB; }
 
 .floating-label-form-group-with-focus label {
-  color: #18BC9C; }
+  color: #fff; }
 
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #E9ECEF; }
 
 .footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background-color: #2B2B2B;
+  background-color: #1F1F1F;
   color: #fff; }
 
 .copyright {

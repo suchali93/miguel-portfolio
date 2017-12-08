@@ -75,7 +75,7 @@
       <div class="container">
         <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
         <h1 class="mb-0">Start Bootstrap</h1>
-        <hr class="bar-light">
+        <hr class="hr-light">
         <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
       </div>
     </header>
@@ -84,7 +84,7 @@
     <section class="projects" id="projects">
       <div class="container">
         <h2 class="text-center text-secondary mb-0">Projects</h2>
-        <hr class="bar-dark mb-5">
+        <hr class="hr-dark mb-5">
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <a class="projects-item d-block mx-auto" href="#projects-modal-1">
@@ -124,7 +124,7 @@
     <section class="bg-primary text-white mb-0" id="about">
       <div class="container">
         <h2 class="text-center text-primary">About Me</h2>
-        <hr class="bar-light mb-5">
+        <hr class="hr-light mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
@@ -146,7 +146,7 @@
     <section class="mb-0" id="experience">
       <div class="container">
         <h2 class="text-center text-secondary">Experience</h2>
-        <hr class="bar-dark mb-5">
+        <hr class="hr-dark mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
@@ -159,24 +159,31 @@
     </section>
 
     <!-- Contact Footer -->
-    <footer class="footer text-center" id="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <h2 class="text-center text-primary mb-0">Contact Me</h2>
-        <hr class="bar-dark mb-5">
+        <hr class="hr-light mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <!--
-            Name = entry.2005620554
+            First Name = entry.2005620554
+            Last Name = entry.1396137393
             Email = entry.1045781291
+            Subject = entry.192121101
             Message = entry.1065046570
             -->
             <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse?" target="hidden_iframe">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
-                  <input class="form-control nameField" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control name-field" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
+                <!-- <div class="form-group floating-label-form-group controls mb-0 pb-2" id="lastname">
+                  <label>Last Name</label>
+                  <input class="form-control lastname-field" type="text" placeholder="Last Name" name="entry.1396137393" id="entry.1396137393" required="required" data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div> -->
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -202,13 +209,16 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <footer class="footer text-center">
+      <div class="copyright py-4 text-center text-muted">
+        <div class="container">
+          <small>Copyright &copy; Miguel de Arcos 2017</small>
+        </div>
+      </div>
     </footer>
 
-    <div class="copyright py-4 text-center text-muted">
-      <div class="container">
-        <small>Copyright &copy; Miguel de Arcos 2017</small>
-      </div>
-    </div>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
@@ -229,7 +239,7 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary mb-0">Project Name</h2>
-              <hr class="bar-dark mb-5">
+              <hr class="hr-dark mb-5">
               <img class="img-fluid mb-5" src="img/projects/cabin.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
@@ -251,7 +261,7 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary mb-0">Project Name</h2>
-              <hr class="bar-dark mb-5">
+              <hr class="hr-dark mb-5">
               <img class="img-fluid mb-5" src="img/projects/cake.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
@@ -273,7 +283,7 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <h2 class="text-secondary mb-0">Project Name</h2>
-              <hr class="bar-dark mb-5">
+              <hr class="hr-dark mb-5">
               <img class="img-fluid mb-5" src="img/projects/circus.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
@@ -301,7 +311,7 @@
         $("#contactForm input,#contactForm textarea").not("[type=submit]").jqBootstrapValidation({
             submitSuccess: function($form, event) {
                 console.log("Success");
-                var name = $("input.nameField").val();
+                var name = $("input.name-field").val();
                 $("#sendMessageButton").attr("disabled", false);
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
