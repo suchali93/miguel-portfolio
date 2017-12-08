@@ -65,11 +65,30 @@
   $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
       $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+        $('#success').html("");
+        $("#sendMessageButton").attr("disabled", false);
+        $("#sendMessageButton").removeClass("disabled");
     }).on("focus", ".floating-label-form-group", function() {
       $(this).addClass("floating-label-form-group-with-focus");
     }).on("blur", ".floating-label-form-group", function() {
       $(this).removeClass("floating-label-form-group-with-focus");
     });
+  });
+
+  // Success message for contact form
+  $(function () {
+      $("#contactForm input,#contactForm textarea").not("[type=submit]").jqBootstrapValidation({
+          submitSuccess: function($form, event) {
+              console.log("Success");
+              var name = $("input.name-field").val();
+              $("#sendMessageButton").attr("disabled", true);
+              $("#sendMessageButton").addClass("disabled");
+              $('#success').html("<div class='alert alert-success'>");
+              $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+              $('#success > .alert-success').append("<strong>Thank you, " + name + "! Your message has been sent. I will be in touch soon.</strong>");
+              $('#success > .alert-success').append('</div>');
+          }
+      });
   });
 
 })(jQuery); // End of use strict

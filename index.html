@@ -173,7 +173,7 @@
             Message = entry.1065046570
             -->
             <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse?" target="hidden_iframe">
-              <div class="control-group">
+              <div class="control-group"  id="name">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
                   <input class="form-control name-field" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
@@ -185,14 +185,14 @@
                   <p class="help-block text-danger"></p>
                 </div> -->
               </div>
-              <div class="control-group">
+              <div class="control-group" id="email">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Email Address</label>
                   <input class="form-control" type="email" placeholder="Email Address" name="entry.1045781291" id="entry.1045781291" required="required" data-validation-required-message="Please enter your email address.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="control-group">
+              <div class="control-group" id="message">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Message</label>
                   <textarea class="form-control" rows="5" placeholder="Message" name="entry.1065046570" id="entry.1065046570" required="required" data-validation-required-message="Please enter a message."></textarea>
@@ -305,25 +305,9 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <!-- <script src="js/contact_me.js"></script> -->
-    <script type="text/javascript">
-    $(function () {
-        $("#contactForm input,#contactForm textarea").not("[type=submit]").jqBootstrapValidation({
-            submitSuccess: function($form, event) {
-                console.log("Success");
-                var name = $("input.name-field").val();
-                $("#sendMessageButton").attr("disabled", false);
-                $('#success').html("<div class='alert alert-success'>");
-                $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
-                $('#success > .alert-success').append("<strong>Thank you, " + name + "! Your message has been sent. I will be in touch soon.</strong>");
-                $('#success > .alert-success').append('</div>');
-            }
-        });
-    });
-    </script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
+    <script src="js/freelancer.js"></script>
 
   </body>
 
