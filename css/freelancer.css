@@ -41,7 +41,7 @@ section {
       line-height: 2rem; } }
 
 .btn-xl {
-  padding: 1rem 1.75rem;
+  padding: 0.5rem 1.75rem;
   font-size: 1.25rem; }
 
 .btn-social {
@@ -252,7 +252,8 @@ a {
     color: #128F76; }
 
 .btn {
-  border-width: 2px; }
+  border-width: 2px;
+  border-radius: 2px; }
 
 .bg-primary {
   background-color: #D7CEC7 !important; }
@@ -267,11 +268,11 @@ a {
   color: #3C3C3C !important; }
 
 .btn-primary {
-  background-color: #18BC9C;
-  border-color: #18BC9C; }
+  background-color: #265077;
+  border-color: #265077; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #128F76;
-    border-color: #128F76; }
+    background-color: #1a3650 !important;
+    border-color: #1a3650 !important; }
 
 .btn-secondary {
   background-color: #2C3E50;
