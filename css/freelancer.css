@@ -126,28 +126,33 @@ header.masthead {
     header.masthead h2 {
       font-size: 1.75em; } }
 
+#p1 {
+  margin-top: 2rem; }
+
+#p2 {
+  margin-top: 1.2rem; }
+
+#p3 {
+  margin-top: 2rem; }
+
 .projects {
   margin-bottom: -15px; }
   .projects .projects-item {
     position: relative;
     display: block;
     max-width: 25rem;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    height: 17rem; }
     .projects .projects-item .projects-item-caption {
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
       opacity: 0;
-      background-color: rgba(24, 188, 156, 0.9); }
+      background-color: #00000090; }
       .projects .projects-item .projects-item-caption:hover {
         opacity: 1; }
       .projects .projects-item .projects-item-caption .projects-item-caption-content {
         font-size: 1.5rem; }
-  @media (min-width: 576px) {
-    .projects {
-      margin-bottom: -30px; }
-      .projects .projects-item {
-        margin-bottom: 30px; } }
 
 .projects-modal .projects-modal-dialog {
   padding: 3rem 1rem;

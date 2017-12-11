@@ -25,7 +25,6 @@
     <link href="css/freelancer.css" rel="stylesheet">
 
     <!-- Logo icon -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png"> -->
     <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
 
     <!-- Website analytics script -->
@@ -71,11 +70,11 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead bg-primary text-secondary text-center">
       <div class="container">
         <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
         <h1 class="mb-0">Start Bootstrap</h1>
-        <hr class="hr-light">
+        <hr class="hr-dark">
         <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2>
       </div>
     </header>
@@ -90,30 +89,30 @@
             <a class="projects-item d-block mx-auto" href="#projects-modal-1">
               <div class="projects-item-caption d-flex position-absolute h-100 w-100">
                 <div class="projects-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-plus"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/projects/1legoman.jpg" alt="">
+              <img class="img-fluid" id="p1" src="img/projects/1legomantrans.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a class="projects-item d-block mx-auto" href="#projects-modal-2">
               <div class="projects-item-caption d-flex position-absolute h-100 w-100">
                 <div class="projects-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-plus"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/projects/cake.png" alt="">
+              <img class="img-fluid" id="p2" src="img/projects/2sixdegreestrans.png" alt="">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a class="projects-item d-block mx-auto" href="#projects-modal-3">
               <div class="projects-item-caption d-flex position-absolute h-100 w-100">
                 <div class="projects-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-plus"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/projects/circus.png" alt="">
+              <img class="img-fluid" id="p3" src="img/projects/1legomantrans.png" alt="">
             </a>
           </div>
         </div>
@@ -121,10 +120,10 @@
     </section>
 
     <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <section class="bg-primary text-secondary mb-0" id="about">
       <div class="container">
-        <h2 class="text-center text-primary">About Me</h2>
-        <hr class="hr-light mb-5">
+        <h2 class="text-center text-secondary">About Me</h2>
+        <hr class="hr-dark mb-5">
         <div class="row">
           <div class="col-lg-4 ml-auto">
             <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
@@ -166,24 +165,17 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <!--
-            First Name = entry.2005620554
-            Last Name = entry.1396137393
+            Name = entry.2005620554
             Email = entry.1045781291
-            Subject = entry.192121101
             Message = entry.1065046570
             -->
-            <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse?" target="hidden_iframe">
+            <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse" target="hidden_iframe">
               <div class="control-group"  id="name">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
                   <input class="form-control name-field" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
-                <!-- <div class="form-group floating-label-form-group controls mb-0 pb-2" id="lastname">
-                  <label>Last Name</label>
-                  <input class="form-control lastname-field" type="text" placeholder="Last Name" name="entry.1396137393" id="entry.1396137393" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
-                </div> -->
               </div>
               <div class="control-group" id="email">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
