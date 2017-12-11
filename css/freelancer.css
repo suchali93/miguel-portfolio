@@ -151,8 +151,19 @@ header.masthead {
       background-color: #00000090; }
       .projects .projects-item .projects-item-caption:hover {
         opacity: 1; }
-      .projects .projects-item .projects-item-caption .projects-item-caption-content {
-        font-size: 1.5rem; }
+        .projects .projects-item .projects-item-caption .projects-item-caption-heading {
+          position: absolute;
+          top: 10%;
+          left: 10%; }
+        .projects .projects-item .projects-item-caption .projects-item-caption-plus {
+          font-size: 1.5em;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 2rem;
+          width: 2rem;
+          margin-left: -1rem;
+          margin-top: -1rem; }
 
 .projects-modal .projects-modal-dialog {
   padding: 3rem 1rem;
