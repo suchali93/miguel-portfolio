@@ -6,6 +6,18 @@
 body {
   font-family: 'Montserrat'; }
 
+/*.left-to-right {
+    -webkit-transition: all 10s ease-in-out;
+            transition: all 10s cubic-bezier(.190, 1.000, .220, 1.000) 0s;
+    -webkit-transform: translateX(-1000%);
+        -ms-transform: translateX(-1000%);
+            transform: translateX(-1000%); }
+
+.animate .left-to-right {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }*/
+
 hr.hr-light,
 hr.hr-dark {
   max-width: 15rem;
@@ -121,10 +133,10 @@ header.masthead {
     padding-top: calc(6rem + 106px);
     padding-bottom: 6rem; }
     header.masthead h1 {
-      font-size: 4.75em;
-      line-height: 4rem; }
+      font-size: 3.5em;
+      line-height: 3.5rem; }
     header.masthead h2 {
-      font-size: 1.75em; } }
+      font-size: 1.5em; } }
 
 #p1 {
   margin-top: 2rem; }
@@ -134,6 +146,35 @@ header.masthead {
 
 #p3 {
   margin-top: 2rem; }
+
+.projects-item {
+  overflow: hidden; }
+.projects-item:hover .caption {
+  bottom: 0; }
+.caption {
+    position: absolute;
+    bottom: -75px;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+.caption-text {
+  position: relative;
+  z-index: 500;
+  padding: 15px 8px;
+  color: white; }
+  .text-title {
+    color: white; }
+  .text-category {
+      font-size: 12px;
+      display: block; }
+  .caption-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #41C4AB; }
 
 .projects {
   margin-bottom: -15px; }
@@ -187,9 +228,12 @@ header.masthead {
   .projects-modal .projects-modal-dialog {
     min-height: 100vh;
     padding: 5rem;
-    margin: 3rem calc(3rem - 8px); }
-    .projects-modal .projects-modal-dialog h2 {
-      font-size: 3rem; } }
+    margin: 3rem calc(3rem - 8px); } }
+
+.about .img-circle {
+  width: 9rem;
+  border-radius: 50%;
+}
 
 .contact {
   background-color: #2b2b2b; }
@@ -260,7 +304,7 @@ form .row:first-child .floating-label-form-group {
 a {
   color: #265077; }
   a:focus, a:hover, a:active {
-    color: #128F76; }
+    color: #1a3650; }
 
 .alert-success {
   color: #265077;
