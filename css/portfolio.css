@@ -154,28 +154,42 @@ header.masthead {
     display: block;
     max-width: 25rem;
     margin-bottom: 15px;
-    height: 17rem; }
+    height: 17rem;
+    overflow: hidden; }
     .projects .projects-item .projects-item-caption {
+      position: absolute;
+      bottom: -75px;
+      width: 100%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s; }
+    .projects .projects-item:hover .projects-item-caption {
+      bottom: 0; }
+      .projects .projects-item .projects-item-caption .caption-text {
+        position: relative;
+        z-index: 500;
+        padding: 15px 8px;
+        color: white; }
+        .projects .projects-item .projects-item-caption .caption-text .text-title {
+          color: white; }
+        .projects .projects-item .projects-item-caption .caption-text .text-category {
+          font-size: 12px;
+          display: block; }
+      .projects .projects-item .projects-item-caption .caption-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #265077; }
+    .projects .projects-item .projects-item-overlay {
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
       opacity: 0;
       background-color: #00000090; }
-      .projects .projects-item .projects-item-caption:hover {
+      .projects .projects-item .projects-item-overlay:hover, .projects .projects-item:hover .projects-item-overlay{
         opacity: 1; }
-        .projects .projects-item .projects-item-caption .projects-item-caption-heading {
-          position: absolute;
-          top: 10%;
-          left: 10%; }
-        .projects .projects-item .projects-item-caption .projects-item-caption-plus {
-          font-size: 1.5em;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          height: 2rem;
-          width: 2rem;
-          margin-left: -1rem;
-          margin-top: -1rem; }
 
 .projects-modal .projects-modal-dialog {
   padding: 3rem 1rem;
