@@ -147,35 +147,6 @@ header.masthead {
 #p3 {
   margin-top: 2rem; }
 
-.projects-item {
-  overflow: hidden; }
-.projects-item:hover .caption {
-  bottom: 0; }
-.caption {
-    position: absolute;
-    bottom: -75px;
-    width: 100%;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s; }
-.caption-text {
-  position: relative;
-  z-index: 500;
-  padding: 15px 8px;
-  color: white; }
-  .text-title {
-    color: white; }
-  .text-category {
-      font-size: 12px;
-      display: block; }
-  .caption-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #41C4AB; }
-
 .projects {
   margin-bottom: -15px; }
   .projects .projects-item {
