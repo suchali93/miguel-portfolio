@@ -25,7 +25,7 @@
     <link href="css/portfolio.min.css" rel="stylesheet">
 
     <!-- Logo icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logoicon.png">
 
     <!-- Website analytics script -->
     <!-- <script>
@@ -45,7 +45,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-left navbar-brand-logo" href="#page-top"><img src="img/logotrans.png"></a>
+        <a class="navbar-left navbar-brand-logo" href="#page-top"><img src="img/logopage.png"></a>
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Miguel de Arcos</a>
         <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
@@ -70,16 +70,14 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-secondary text-center">
-      <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+    <header class="masthead bg-header text-primary text-center">
+      <div class="overlay"></div>
+      <div class="container intro-text">
         <h1 class="mb-0">
           Hi, I am Miguel
-          <!-- <span class="txt-rotate" id="hello" data-period="2000" data-rotate='[ "Hi, I am Miguel!"]'> -->
-          </span>
         </h1>
-        <hr class="hr-dark">
-        <h2 class="font-weight-light mb-0">I am a Mechatronics Engineer who loves to design and play with robots.</h2>
+        <hr class="hr-light">
+        <h2 class="font-weight-light mb-0">I am a Mechatronics Engineer who loves to design and play with robots</h2>
       </div>
     </header>
 
@@ -93,7 +91,21 @@
             <a class="projects-item d-block mx-auto" href="#projects-modal-1">
               <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
               </div>
-              <img class="img-fluid" id="p1" src="img/projects/1legomantrans.png" alt="">
+              <img class="img-fluid" id="selfbalancing" src="img/projects/1selfbalancing.png" alt="">
+              <div class="projects-item-caption">
+                <div class="caption-text">
+                  <div class="text-title">Self-Balancing Autonomous Robot</div>
+                  <span class="text-category"></span>
+                </div>
+                <div class="caption-bg"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="projects-item d-block mx-auto" href="#projects-modal-1">
+              <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
+              </div>
+              <img class="img-fluid" id="legoman" src="img/projects/2legoman.png" alt="">
               <div class="projects-item-caption">
                 <div class="caption-text">
                   <div class="text-title">Lego Man Retrieval Robot</div>
@@ -107,7 +119,7 @@
             <a class="projects-item d-block mx-auto" href="#projects-modal-2">
               <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
               </div>
-              <img class="img-fluid" id="p2" src="img/projects/2sixdegreestrans.png" alt="">
+              <img class="img-fluid" id="sixdegrees" src="img/projects/3sixdegrees.png" alt="">
               <div class="projects-item-caption">
                 <div class="caption-text">
                   <div class="text-title">Six Degrees of Freedom Controller</div>
@@ -117,7 +129,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             <a class="projects-item d-block mx-auto" href="#projects-modal-3">
               <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
               </div>
@@ -130,7 +142,7 @@
                 <div class="caption-bg"></div>
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -142,17 +154,35 @@
         <hr class="hr-dark mb-5">
         <div class="row">
           <div class="col-lg-2 ml-auto">
-            <img src="img/profile.jpg" class="img-circle" alt="">
+            <img src="img/profilesmall.jpg" class="img-circle" alt="">
           </div>
-          <div class="col-lg-8 mr-auto">
-            I'm a Mechatronics engineer!
+          <div class="col-lg-8 mt-3 mr-auto">
+            I'm a Mechatronics engineer with a BASc from the University of Waterloo and over 3 years of work experience. I enjoy working on projects... In my spare time, I love to do photography and explore websites like <a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810?utm_medium=referral&utm_campaign=api" target="_blank">Udacity</a> to learn about new subjects that pique my curiosity.
+            <div class="mt-4">
+              <ul class="list-inline">
+                <li class="list-inline-item mr-3">
+                  <a href="https://www.linkedin.com/in/miguel-de-arcos-34b03349/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mr-3">
+                  <a href="https://www.instagram.com/migdea/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mr-3">
+                  <a href="#contact">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+            </ul>
+            </div>
+            <div class="mt-4">
+              <a class="btn btn-primary btn-xl" href="resume.pdf">
+                View Resume PDF
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fa fa-download mr-2"></i>
-            View Resume PDF
-          </a>
         </div>
       </div>
     </section>
@@ -163,11 +193,26 @@
         <h2 class="text-center text-secondary">Experience</h2>
         <hr class="hr-dark mb-5">
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 text-center">
+            <img src="img/work/work6.jpg" class="img-bw img-small" alt="">
           </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 text-center">
+            <img src="img/work/work5.jpg" class="img-bw img-small" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 text-center">
+            <img src="img/work/work4.jpg" class="img-bw img-small" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 text-center">
+            <img src="img/work/work3.jpg" class="img-bw img-small" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 text-center">
+            <img src="img/work/work2.jpg" class="img-bw img-small" alt="">
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 text-center">
+            <img src="img/work/work1.jpg" class="img-bw img-small" alt="">
           </div>
         </div>
       </div>
@@ -246,9 +291,9 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary mb-0">Lego Man Retrieval Robot</h2>
+              <h2 class="text-secondary mb-0">Self-Balancing Autonomous Robot</h2>
               <hr class="hr-dark">
-              <img class="img-fluid" src="img/projects/1legomantrans.png" alt="">
+              <img class="img-fluid" src="img/projects/1selfbalancing.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
@@ -268,9 +313,9 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary mb-0">Six Degrees of Freedom Controller</h2>
+              <h2 class="text-secondary mb-0">Lego Man Retrieval Robot</h2>
               <hr class="hr-dark mb-5">
-              <img class="img-fluid mb-5" src="img/projects/2sixdegreestrans.png" alt="">
+              <img class="img-fluid mb-5" src="img/projects/2legoman.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
@@ -290,9 +335,9 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary mb-0">Project Name</h2>
+              <h2 class="text-secondary mb-0">Six Degrees of Freedom Controller</h2>
               <hr class="hr-dark mb-5">
-              <img class="img-fluid mb-5" src="img/projects/1legomantrans.png" alt="">
+              <img class="img-fluid mb-5" src="img/projects/3sixdegrees.png" alt="">
               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
