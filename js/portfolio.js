@@ -89,7 +89,7 @@
           }
       });
   });
-
+  
 })(jQuery); // End of use strict
 
 // var TxtRotate = function(el, toRotate, period) {

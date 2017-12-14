@@ -61,6 +61,21 @@ gulp.task('minify-js', function() {
     }))
 });
 
+gulp.task('minify-js', function() {
+  return gulp.src('js/skillchart.js')
+    .pipe(uglify())
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
 // Copy vendor files from /node_modules into /vendor
 // NOTE: requires `npm install` before running!
 gulp.task('copy', function() {
