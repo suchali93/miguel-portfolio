@@ -90,11 +90,6 @@
       });
   });
 
-  // var animate = function() {
-  //   $("body").addClass("animate");
-  // };
-  // $(window).on("load", animate);
-
 })(jQuery); // End of use strict
 
 // var TxtRotate = function(el, toRotate, period) {

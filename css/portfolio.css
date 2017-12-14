@@ -153,9 +153,9 @@ header.masthead {
       font-size: 1.5em; } }
 
 #selfbalancing {
-  margin-top: 1rem; }
+  margin-top: 0rem; }
 #legoman {
-  margin-top: 3rem; }
+  margin-top: 2.5rem; }
 #sixdegrees {
   margin-top: 1.2rem; }
 
@@ -170,7 +170,7 @@ header.masthead {
     overflow: hidden; }
     .projects .projects-item .projects-item-caption {
       position: absolute;
-      bottom: -75px;
+      bottom: -150px;
       width: 100%;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
@@ -323,8 +323,8 @@ a {
 
 .bg-header {
   position: relative;
-  background: #eceff1 url(../img/header/header1.jpg) no-repeat center;
-  background-size: 100%; }
+  background: #eceff1 url(../img/header/header1.jpg) no-repeat 50% 70%;
+  background-size: 100% auto; }
   .bg-header .overlay {
     position:absolute;
     top: 0;
@@ -332,8 +332,10 @@ a {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.5;
-  }
+    opacity: 0.5; }
+  @media (max-width: 646px) {
+    .bg-header {
+      background-size: auto 100%; } }
 
 .bg-primary {
   background-color: #eceff1 !important; }
