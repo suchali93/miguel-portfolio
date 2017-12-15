@@ -3,10 +3,10 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
-::-moz-selection {
-  text-shadow: none;
-  background: #13283c80; }
 ::selection {
+   text-shadow: none;
+   background: #13283c80; }
+::-moz-selection {
   text-shadow: none;
   background: #13283c80; }
 img::selection {
@@ -239,12 +239,42 @@ header.masthead {
 .experience .img-small {
   width: 6rem; }
 
+.skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  @media (min-width: 1200px) {
+    .skills {
+      margin-left: 5rem;
+      margin-right: -10rem; } }
+  @media (min-width: 767px) and (max-width: 990px) {
+    .skills {
+      margin-left: 3rem;
+      margin-right: -10rem; } }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .skills {
+      margin-left: 2rem;
+      margin-right: -10rem; } }
 .chart-container {
-    width: 12rem;
-    margin: 0 auto; }
+  margin: 0; }
 .doughnut-chart-container {
-    width: 12rem;
-    float: left; }
+  width: 80%;
+  margin: auto; }
+  @media (min-width: 1200px) {
+  .chart-container.col-lg-2 {
+    -ms-flex: 0 0 14%;
+    flex: 0 0 14%;
+    max-width: 14%; } }
+  @media (max-width: 991px) and (min-width: 768px) {
+  .chart-container.col-md-3 {
+    -ms-flex: 0 0 22%;
+    flex: 0 0 22%;
+    max-width: 22%; } }
+  @media (min-width: 576px) and (max-width: 767px){
+  .chart-container.col-sm-4 {
+      -ms-flex: 0 0 30%;
+      flex: 0 0 30%;
+      max-width: 30%; } }
 
 .contact {
   background-color: #2b2b2b; }
