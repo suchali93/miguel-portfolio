@@ -238,14 +238,21 @@ header.masthead {
   filter: grayscale(100%); }
 .experience .img-small {
   width: 6rem; }
+.experience .img-square {
+  width: 7rem;
+}
 
+.skill-header {
+  margin-top: 4rem !important; }
+.skill-row {
+  overflow: hidden;}
 .skills {
   width: 100%;
   display: flex;
   flex-wrap: wrap; }
   @media (min-width: 1200px) {
     .skills {
-      margin-left: 5rem;
+      margin-left: 5.5rem;
       margin-right: -10rem; } }
   @media (min-width: 767px) and (max-width: 990px) {
     .skills {
@@ -275,6 +282,28 @@ header.masthead {
       -ms-flex: 0 0 30%;
       flex: 0 0 30%;
       max-width: 30%; } }
+.legend-row {
+  display: flex; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  min-width: 105px; }
+  .legend .legend-box {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem; }
+    .legend .legend-box.blue {
+      background-color: #129d7595; }
+    .legend .legend-box.green {
+      background-color: #9ccc6495; }
+    .legend .legend-box.yellow {
+      background-color: #ffd54e95; }
+    .legend .legend-box.red {
+      background-color: #fd676095; }
+    .legend .legend-text {
+      font-size: 0.8em;
+    }
 
 .contact {
   background-color: #2b2b2b; }

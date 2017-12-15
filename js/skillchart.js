@@ -41,12 +41,12 @@ Chart.pluginService.register({
   }
 });
 
-var ctx1 = $("#skill-canvas1");
-var ctx2 = $("#skill-canvas2");
-var ctx3 = $("#skill-canvas3");
-var ctx4 = $("#skill-canvas4");
-var ctx5 = $("#skill-canvas5");
-var ctx6 = $("#skill-canvas6");
+var ctxCpp = $("#skill-canvas-cpp");
+var ctxPython = $("#skill-canvas-python");
+var ctxJava = $("#skill-canvas-java");
+var ctxMatlab = $("#skill-canvas-matlab");
+var ctxBash = $("#skill-canvas-bash");
+var ctxLinux = $("#skill-canvas-linux");
 
 var cpp = 8.5;
 var python = 7.5;
@@ -55,109 +55,109 @@ var matlab = 6;
 var bash = 6;
 var linux = 8;
 
-var allbgcolors = ['#fd6760','#fd6760','#ffa059','#ffa059','#ffc157','#ffc157','#ffd54e','#ffd54e','#fff176','#fff176','#d4e157','#d4e157','#c7db39','#c7db39','#9ccc64','#9ccc64','#66bb6a','#66bb6a','#4db6ac','#4db6ac','#159f92','#159f92'];
+var allbgcolors = ['#fd676095','#fd676095','#ffa05995','#ffa05995','#ffc15795','#ffc15795','#ffd54e95','#ffd54e95','#c7db3995','#c7db3995','#9ccc6495','#9ccc6495','#66bb6a95','#66bb6a95','#4db68995','#4db68995','#15b49395','#15b49395','#129d7595','#129d7595'];
 var bgcolor = ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff'];
 
-var bgcolor1 = bgcolor.slice();
-var datalist1 = [];
+var bgcolorCpp = bgcolor.slice();
+var datalistCpp = [];
 for(var i=0; i<2*cpp; i++) {
-  datalist1[i] = 0.5;
-  bgcolor1[i] = allbgcolors[i];
+  datalistCpp[i] = 0.5;
+  bgcolorCpp[i] = allbgcolors[i];
 }
-datalist1.push(10-cpp);
+datalistCpp.push(10-cpp);
 
-var bgcolor2 = bgcolor.slice();
-var datalist2 = [];
+var bgcolorPython = bgcolor.slice();
+var datalistPython = [];
 for(var i=0; i<2*python; i++) {
-  datalist2[i] = 0.5;
-  bgcolor2[i] = allbgcolors[i];
+  datalistPython[i] = 0.5;
+  bgcolorPython[i] = allbgcolors[i];
 }
-datalist2.push(10-python);
+datalistPython.push(10-python);
 
-var bgcolor3 = bgcolor.slice();
-var datalist3 = [];
+var bgcolorJava = bgcolor.slice();
+var datalistJava = [];
 for(var i=0; i<2*java; i++) {
-  datalist3[i] = 0.5;
-  bgcolor3[i] = allbgcolors[i];
+  datalistJava[i] = 0.5;
+  bgcolorJava[i] = allbgcolors[i];
 }
-datalist3.push(10-java);
+datalistJava.push(10-java);
 
-var bgcolor4 = bgcolor.slice();
-var datalist4 = [];
+var bgcolorMatlab = bgcolor.slice();
+var datalistMatlab = [];
 for(var i=0; i<2*matlab; i++) {
-  datalist4[i] = 0.5;
-  bgcolor4[i] = allbgcolors[i];
+  datalistMatlab[i] = 0.5;
+  bgcolorMatlab[i] = allbgcolors[i];
 }
-datalist4.push(10-matlab);
+datalistMatlab.push(10-matlab);
 
-var bgcolor5 = bgcolor.slice();
-var datalist5 = [];
+var bgcolorBash = bgcolor.slice();
+var datalistBash = [];
 for(var i=0; i<2*bash; i++) {
-  datalist5[i] = 0.5;
-  bgcolor5[i] = allbgcolors[i];
+  datalistBash[i] = 0.5;
+  bgcolorBash[i] = allbgcolors[i];
 }
-datalist5.push(10-bash);
+datalistBash.push(10-bash);
 
-var bgcolor6 = bgcolor.slice();
-var datalist6 = [];
+var bgcolorLinux = bgcolor.slice();
+var datalistLinux = [];
 for(var i=0; i<2*linux; i++) {
-  datalist6[i] = 0.5;
-  bgcolor6[i] = allbgcolors[i];
+  datalistLinux[i] = 0.5;
+  bgcolorLinux[i] = allbgcolors[i];
 }
-datalist6.push(10-linux);
+datalistLinux.push(10-linux);
 
-var data1 = {
+var dataCpp = {
   datasets: [{
     label: 'C/C++',
-    data: datalist1,
-    backgroundColor: bgcolor1,
+    data: datalistCpp,
+    backgroundColor: bgcolorCpp,
     borderWidth: 0,
-    hoverBackgroundColor: bgcolor1,
+    hoverBackgroundColor: bgcolorCpp,
     hoverBorderWidth: 0 }]
 };
-var data2 = {
+var dataPython = {
   datasets: [{
     label: 'Python',
-    data: datalist2,
-    backgroundColor: bgcolor2,
+    data: datalistPython,
+    backgroundColor: bgcolorPython,
     borderWidth: 0,
-    hoverBackgroundColor: bgcolor2,
+    hoverBackgroundColor: bgcolorPython,
     hoverBorderWidth: 0 }]
 };
-var data3 = {
+var dataJava = {
   datasets: [{
     label: 'Java',
-    data: datalist3,
-    backgroundColor: bgcolor3,
+    data: datalistJava,
+    backgroundColor: bgcolorJava,
     borderWidth: 0,
-    hoverBackgroundColor: bgcolor3,
+    hoverBackgroundColor: bgcolorJava,
     hoverBorderWidth: 0 }]
 };
-var data4 = {
+var dataMatlab = {
   datasets: [{
     label: 'Matlab',
-    data: datalist4,
-    backgroundColor: bgcolor4,
+    data: datalistMatlab,
+    backgroundColor: bgcolorMatlab,
     borderWidth: 0,
-    hoverBackgroundColor: bgcolor4,
+    hoverBackgroundColor: bgcolorMatlab,
     hoverBorderWidth: 0 }]
 };
-var data5 = {
+var dataBash = {
   datasets: [{
     label: 'Bash',
-    data: datalist5,
-    backgroundColor: bgcolor5,
+    data: datalistBash,
+    backgroundColor: bgcolorBash,
     borderWidth: 0,
-    hoverBackgroundColor: bgcolor5,
+    hoverBackgroundColor: bgcolorBash,
     hoverBorderWidth: 0 }]
 };
-var data6 = {
+var dataLinux = {
   datasets: [{
     label: 'Linux',
-    data: datalist6,
-    backgroundColor: bgcolor6,
+    data: datalistLinux,
+    backgroundColor: bgcolorLinux,
     borderWidth: 0,
-    hoverBackgroundColor: bgcolor6,
+    hoverBackgroundColor: bgcolorLinux,
     hoverBorderWidth: 0 }]
 };
 
@@ -172,7 +172,9 @@ var data6 = {
 // };
 
 var options = {
-  tooltips: false,
+  tooltips: {
+    enabled: false
+  },
   cutoutPercentage : 70,
   responsive: true,
   maintainAspectRatio: true,
@@ -185,47 +187,47 @@ var options = {
   }
 };
 
-var chart1 = new Chart(ctx1, {
+var chartCpp = new Chart(ctxCpp, {
     type: 'doughnut',
-    data: data1,
+    data: dataCpp,
     options: options
 });
-chart1.options.elements.center.text = data1.datasets[0].label;
+chartCpp.options.elements.center.text = dataCpp.datasets[0].label;
 
-var chart2 = new Chart(ctx2, {
+var chartPython = new Chart(ctxPython, {
     type: 'doughnut',
-    data: data2,
+    data: dataPython,
     options: options
 });
-chart2.options.elements.center.text = data2.datasets[0].label;
+chartPython.options.elements.center.text = dataPython.datasets[0].label;
 
-var chart3 = new Chart(ctx3, {
+var chartJava = new Chart(ctxJava, {
     type: 'doughnut',
-    data: data3,
+    data: dataJava,
     options: options
 });
-chart3.options.elements.center.text = data3.datasets[0].label;
+chartJava.options.elements.center.text = dataJava.datasets[0].label;
 
-var chart4 = new Chart(ctx4, {
+var chartMatlab = new Chart(ctxMatlab, {
     type: 'doughnut',
-    data: data4,
+    data: dataMatlab,
     options: options
 });
-chart4.options.elements.center.text = data4.datasets[0].label;
+chartMatlab.options.elements.center.text = dataMatlab.datasets[0].label;
 
-var chart5 = new Chart(ctx5, {
+var chartBash = new Chart(ctxBash, {
     type: 'doughnut',
-    data: data5,
+    data: dataBash,
     options: options
 });
-chart5.options.elements.center.text = data5.datasets[0].label;
+chartBash.options.elements.center.text = dataBash.datasets[0].label;
 
-var chart6 = new Chart(ctx6, {
+var chartLinux = new Chart(ctxLinux, {
     type: 'doughnut',
-    data: data6,
+    data: dataLinux,
     options: options
 });
-chart6.options.elements.center.text = data6.datasets[0].label;
+chartLinux.options.elements.center.text = dataLinux.datasets[0].label;
 
 // var chart7 = new Chart(ctx7, {
 //     type: 'doughnut',
