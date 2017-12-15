@@ -233,6 +233,18 @@ header.masthead {
   border: #d7dde0 solid 0.5rem;
 }
 
+.img-sb-1 {
+  width: 20rem;
+  float: left; }
+.img-sb-2 {
+  width: 20rem;
+  float: left; }
+.img-sb-3 {
+  width: 20rem; }
+.img-sb-4 {
+  width: 40rem; }
+
+
 .experience .img-bw {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
