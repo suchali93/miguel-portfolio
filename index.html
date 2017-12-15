@@ -199,11 +199,13 @@
           </div>
         </div>
         <div class="row my-5">
-          <div class="col-lg-2 col-md-4 ml-auto">
+          <div class="col-lg-2 col-md-4 ml-auto my-auto">
             <img src="img/work/sandvine.png" class="img-square" alt="">
           </div>
           <div class="col-lg-8 col-md-8 mr-auto">
-            Stuff I did at Sandvine. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+            <strong>Software Engineer</strong>
+            <p>At Sandvine I was tasked with the development of many of the systems within the hardware abstraction layer, mainly the development of drivers. My most notable work was to refactor the infrastructure responsible for reporting sensors data for all the voltage regulators and power supplies. Previously the system wasn’t thread safe, as many different threads could read and clear sensors without any synchronisation and this resulted in unpredictable performance of this critical system. To address this problem I implemented a caching infrastructure that would have exclusive access to the hardware.</p>
+
           </div>
         </div>
         <h5 class="text-center text-secondary mt-5 skill-header">Strongest Skills</h5>
@@ -394,13 +396,29 @@
         <a class="close-button d-none d-md-block projects-modal-dismiss" href="#">
           <i class="fa fa-3x fa-times"></i>
         </a>
-        <div class="container text-center">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary mb-0">Lego Man Retrieval Robot</h2>
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary mb-0 text-center">Lego Man Retrieval Robot</h2>
               <hr class="hr-dark mb-5">
               <img class="img-fluid mb-5" src="img/projects/2legoman.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <p>The objective was to create a device that could retrieve a skier (played by a lego man) stranded on the opposite side of a mountain. The device needed to autonomously navigate the course, find and return the lego to the starting point.</p>
+              <p>Our solution was to make a vehicle with tracks that could climb the “mountain” which was in reality a wooden ramp with a 45 deg incline; this posed a problem since with normal means of traction this is too steep to climb. Another problem was following the ramp to avoid falling off. We devised an ingenious solution that would solve both problems.</p>
+              <p><img src="img/projects/2015 legoman/1.1.jpg" class="img-lm-1" alt="">This is a frontal view of the wheel design. It has sewing needles protruding from the inner wheel (smaller diameter) to give maximum grip into the wooden ramp, and has a ridge that allows a belt to transfer power from the rear wheels to the ones in the front. The outer wheel (larger diameter) is used to protect the spikes from being dulled when on the concrete floor, and serves as a guide when going up the ramp. The outer wheel also has a ridge to add a rubber tire to increase traction against smooth concrete. As you can see in the following video the wheel design works well, as we were the only group to successfully climb the ramp.</p>
+              <video controls="controls" width="800" height="500" name="Ramp Climbing" src="/img/projects/2015 legoman/1.2.mov"></video>
+              <p class="mt-4"><img src="img/projects/2015 legoman/2.1.jpg" class="img-lm-2" alt="">The second part of the challenge was to devise a method of capturing the lego and holding it. The lego was also placed on a wooden platform (1” plywood), thus we also needed a way of climbing onto it. We once again decided to have a single design to acomplish several tasks. Our design was inspired by bobcat bulldozer; these small machines often use their shovel not only for it’s obvious function, but also to lift itself above obstacles. To ensure that the lego would fall into the shovel we added a sweeping arm to knock the lego into place.</p>
+              <video controls="controls" width="800" height="500" name="Ramp Climbing" src="/img/projects/2015 legoman/2.2.mov"></video>
+              <p class="mt-4"><img src="img/projects/2015 legoman/3.png" class="img-lm-3" alt="">The final challenge was to add a sensor that would enable this robot to operate autonomously. First, we needed a way to have the robot find its location relative to the course. The simplest way would be to use the largest obstacle in the course, the large wall separating both sides of the course. By using a simple distance measurement to this wall you can establish your orientation and distance relative to its plane. Scanning till the edge of the wall will finalize your position. To improve accuracy with cheap and noisy sensors we used linear regression to identify the orientation of the wall. To help reduce the the error in our sensors the laser range sensors were mounted to a panning servo, as moving the entire robot would introduce more error into the measurements. This would identify the robot’s positioning at the time of the scan, but between scans we implemented dead reckoning with the use of a gyroscope, accelerometer, and empirical characterisation of the drive servos to update the robot’s location tracking. The panning sensor was equipped with a long range sensor used for positioning relative to the course and a short range sensor used to determine the position of the lego as it is approaching it.</p>
+              <p>Here are pictures of the complete robot.</p>
+              <img src="img/projects/2015 legoman/4.jpg" class="img-lm-4" alt="">
+              <div class="mb-4"></div>
+              <img src="img/projects/2015 legoman/5.jpg" class="img-lm-5" alt="">
+              <div class="mb-4"></div>
+              <img src="img/projects/2015 legoman/6.jpg" class="img-lm-6" alt="">
+              <div class="mb-4"></div>
+              <img src="img/projects/2015 legoman/7.jpg" class="img-lm-7" alt="">
+              <p class="mb-5"></p>
+
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
                 Close Project</a>
@@ -416,13 +434,29 @@
         <a class="close-button d-none d-md-block projects-modal-dismiss" href="#">
           <i class="fa fa-3x fa-times"></i>
         </a>
-        <div class="container text-center">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary mb-0">Six Degrees of Freedom Controller</h2>
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary mb-0 text-center">Six Degrees of Freedom Controller</h2>
               <hr class="hr-dark mb-5">
               <img class="img-fluid mb-5" src="img/projects/3sixdegrees.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <p><img src="img/projects/2016 sixdegrees/1.png" class="img-dof-1" alt="">In 3D space, there are 6 degrees of freedom for any object, 3 translational degrees and 3 rotational. To control such a device the typical way of doing this is to use 2 joysticks, each offering control over 3 degrees. However, this isn’t as intuitive as manipulating the object directly.</p>
+              <p>To simplify the problem, we chose to have different mechanisms to read the two separate types of motion. The first was the translational movements, which we used a gantry system to track the input. In order for the system to be operated smoothly we used linear rails used for CNC machines. The thing that set this design apart from other 6 degrees of freedom controller was the ability to choose between, continuous motion like you have with a mouse, or return to centre motion like you have with a joystick. The former is useful when controlling a robotic arm that has limited range, the latter can be used when controlling something like a submarine, which can go forward nearly indefinitely. To switch between these two option you only needed to flip the black tabs one each axis as seen in the second image below. The tab has springs on either side which push the axis back to its centre once the user releases the tension, like a joystick.</p>
+              <img src="img/projects/2016 sixdegrees/2.jpg" class="img-dof-2" alt="">
+              <img src="img/projects/2016 sixdegrees/3.png" class="img-dof-3" alt="">
+              <img src="img/projects/2016 sixdegrees/4.png" class="img-dof-4" alt="">
+              <p>The rotational motions were much more difficult to track, though it is simple to implement a device with 3 degrees of rotational movement, but we wanted the device to feels as though you were simply manipulating an object in your hand. To do this your hand would have to be at the centre of all three axis of rotation. We settle on a ball and socket type mechanism, but the ball would be hollowed out in order for your hand to be at the centre of rotation. The exterior of the socket having a triangular appearance because each of the points of the triangle has a spring connected to the moving part. This is to give it the same return to center behaviour that the linear axis can can achieve.</p>
+              <img src="img/projects/2016 sixdegrees/5.gif" class="img-dof-5" alt="">
+              <video controls="controls" width="400" height="310" name="Rotational Test" src="/img/projects/2016 sixdegrees/5.1.mp4"></video>
+              <p>The mechanical system is complete, however in order for this to be a controller the system needs sensors to convert the users motion to something meaningful to the device being operated. Most controllers use magnets as a transducer, but thumbsticks have a very small range of motion that can be captured by a single pair of hall effect sensors and a small magnet. This would be feasible for the axis of rotation, but the translational axis would require a different solution. In order to cover the entire range of motion we used a series of hall effect sensors that would stay stationary and the magnet would move relative to its axis. As you can see in the image below the green boards each have a hall effect and are spaced such that as one sensor is about to lose the magnet, another begins detecting it.</p>
+              <img src="img/projects/2016 sixdegrees/6.png" class="img-dof-6" alt="">
+              <p>The device needs a controller to read the sensors and transmit the data. We opted to make a custom circuit board since it would suit our needs better, and would be a great experience. Being that I was the only one with hardware design experience I was the sole designer of the controller board. Since there were too many sensors to have an ADC for each, and cable management would be difficult on a device with so many moving parts, we used a MUX in each translational axis and one for the rotational axis. The TI MSP430 was selected as the mircocontroller, as it had good documentation, but mostly because TI give free samples! You can see the board schematic below.</p>
+              <img src="img/projects/2016 sixdegrees/7.png" class="img-dof-7" alt="">
+              <p>Designing the board layout was far more complicated as the board needed to be fairly small and discrete. To make matters worse, at the time of designing the board we couldn’t decide whether we would use hall effect sensors which required analog signals or optical sensors which used SPI, so the board needed to support both in case we changed our minds. The board had connectors dedicated to each of the two options. In the end the hall effect sensor was selected as the method of choice, and the SPI connectors weren’t populated.The image below is an image of the board layout, as you can see this is a dense layout, and required 4 layers.</p>
+              <img src="img/projects/2016 sixdegrees/8.png" class="img-dof-8" alt="">
+              <img src="img/projects/2016 sixdegrees/9.png" class="img-dof-9" alt="">
+              <p class="mb-5">The device is much smaller than you would think based on the image; the entire mechanism could fit within 10x10 inches. This was done because we wanted this device to take similar real estate on a desk as a mouse pad would.</p>
+
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
                 <i class="fa fa-close"></i>
                 Close Project</a>
