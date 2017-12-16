@@ -335,7 +335,8 @@ header.masthead {
       flex: 0 0 30%;
       max-width: 30%; } }
 .legend-row {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 .legend {
   display: flex;
   flex-wrap: wrap;
