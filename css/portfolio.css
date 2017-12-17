@@ -339,7 +339,6 @@ header.masthead {
   flex-wrap: wrap !important; } 
 .legend {
   display: flex;
-  flex-wrap: wrap;
   margin: 1rem;
   min-width: 105px; }
   .legend .legend-box {
