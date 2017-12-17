@@ -230,8 +230,10 @@ header.masthead {
 .about .img-circle {
   width: 9rem;
   border-radius: 50%;
-  border: #d7dde0 solid 0.5rem;
-}
+  border: #d7dde0 solid 0.5rem; }
+  @media (max-width: 767px) {
+    .about .about-me-details {
+      text-align: center!important; } }
 
 .img-sb-1 {
   width: 20rem;
@@ -291,8 +293,11 @@ header.masthead {
 .experience .img-small {
   width: 6rem; }
 .experience .img-square {
-  width: 7rem;
-}
+  width: 7rem; }
+
+@media (max-width: 767px) {
+  .experience .recent-job-details {
+    text-align: center!important; } }
 
 .skill-header {
   margin-top: 4rem !important; }
@@ -306,7 +311,7 @@ header.masthead {
     .skills {
       margin-left: 5.5rem;
       margin-right: -10rem; } }
-  @media (min-width: 767px) and (max-width: 990px) {
+  @media (min-width: 768px) and (max-width: 990px) {
     .skills {
       margin-left: 3rem;
       margin-right: -10rem; } }
@@ -440,7 +445,7 @@ a {
 
 .bg-header {
   position: relative;
-  background: #eceff1 url(../img/header/header1.jpg) no-repeat 50% 70%;
+  background: #eceff1 url(../img/header.jpg) no-repeat 50% 70%;
   background-size: 100% auto; }
   .bg-header .overlay {
     position:absolute;
