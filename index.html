@@ -234,24 +234,28 @@
             <div class="legend mx-auto">
               <div class="legend-box blue"></div>
               <div class="legend-text">
+                <!-- Expert -->
                 Ninja
               </div>
             </div>
             <div class="legend mx-auto">
               <div class="legend-box green"></div>
               <div class="legend-text">
+                <!-- Proficient -->
                 Awesome
               </div>
             </div>
             <div class="legend mx-auto">
               <div class="legend-box yellow"></div>
               <div class="legend-text">
+                <!-- Basic Knowlegde -->
                 Sure, why not
               </div>
             </div>
             <div class="legend mx-auto">
               <div class="legend-box red"></div>
               <div class="legend-text">
+                <!-- Never Used -->
                 Neanderthal
               </div>
             </div>
@@ -391,22 +395,25 @@
             <div class="col-lg-11 mx-auto">
               <h2 class="text-secondary mb-0 text-center">Lego Man Retrieval Robot</h2>
               <hr class="hr-dark mb-5">
-              <img class="img-fluid mb-5" src="img/projects/2015legoman/top.png" alt="">
-              <p>The objective was to create a device that could retrieve a skier (played by a lego man) stranded on the opposite side of a mountain. The device needed to autonomously navigate the course, find and return the lego to the starting point.</p>
-              <p>Our solution was to make a vehicle with tracks that could climb the “mountain” which was in reality a wooden ramp with a 45 deg incline; this posed a problem since with normal means of traction this is too steep to climb. Another problem was following the ramp to avoid falling off. We devised an ingenious solution that would solve both problems.</p>
-              <p><img class="img-fluid img-lm-1" src="img/projects/2015legoman/1.1.jpg" alt="">This is a frontal view of the wheel design. It has sewing needles protruding from the inner wheel (smaller diameter) to give maximum grip into the wooden ramp, and has a ridge that allows a belt to transfer power from the rear wheels to the ones in the front. The outer wheel (larger diameter) is used to protect the spikes from being dulled when on the concrete floor, and serves as a guide when going up the ramp. The outer wheel also has a ridge to add a rubber tire to increase traction against smooth concrete. As you can see in the following video the wheel design works well, as we were the only group to successfully climb the ramp.</p>
-              <video class="img-fluid" controls="controls" width="800" height="500" name="Ramp Climbing" src="/img/projects/2015legoman/1.2.mp4"></video>
-              <p class="mt-4"><img class="img-fluid img-lm-2" src="img/projects/2015legoman/2.1.jpg" alt="">The second part of the challenge was to devise a method of capturing the lego and holding it. The lego was also placed on a wooden platform (1” plywood), thus we also needed a way of climbing onto it. We once again decided to have a single design to acomplish several tasks. Our design was inspired by bobcat bulldozer; these small machines often use their shovel not only for it’s obvious function, but also to lift itself above obstacles. To ensure that the lego would fall into the shovel we added a sweeping arm to knock the lego into place.</p>
-              <video class="img-fluid" controls="controls" width="800" height="500" name="Ramp Climbing" src="/img/projects/2015legoman/2.2.mp4"></video>
-              <p class="mt-4"><img class="img-fluid img-lm-3" src="img/projects/2015legoman/3.png" alt="">The final challenge was to add a sensor that would enable this robot to operate autonomously. First, we needed a way to have the robot find its location relative to the course. The simplest way would be to use the largest obstacle in the course, the large wall separating both sides of the course. By using a simple distance measurement to this wall you can establish your orientation and distance relative to its plane. Scanning till the edge of the wall will finalize your position. To improve accuracy with cheap and noisy sensors we used linear regression to identify the orientation of the wall. To help reduce the the error in our sensors the laser range sensors were mounted to a panning servo, as moving the entire robot would introduce more error into the measurements. This would identify the robot’s positioning at the time of the scan, but between scans we implemented dead reckoning with the use of a gyroscope, accelerometer, and empirical characterisation of the drive servos to update the robot’s location tracking. The panning sensor was equipped with a long range sensor used for positioning relative to the course and a short range sensor used to determine the position of the lego as it is approaching it.</p>
-              <p>Here are pictures of the complete robot.</p>
-              <img class="img-fluid img-lm-4" src="img/projects/2015legoman/4.jpg" alt="">
-              <div class="mb-4"></div>
-              <img class="img-fluid img-lm-5" src="img/projects/2015legoman/5.jpg" alt="">
-              <div class="mb-4"></div>
-              <img class="img-fluid img-lm-6" src="img/projects/2015legoman/6.jpg" alt="">
-              <div class="mb-4"></div>
-              <img class="img-fluid img-lm-7" src="img/projects/2015legoman/7.jpg" alt="">
+              <img class="img-fluid img-lm" src="img/projects/2015legoman/top.png" alt="">
+              <p>The objective of this project was to create a device that could retrieve a skier (lego man) stranded on the opposite side of a mountain (a wooden ramp with a 45&deg; incline). The device needed to autonomously navigate the course, find and retrieve the lego, and then return to the starting point.</p>
+              <p>Our solution was to make a robot with tracks that could climb the ramp. However, we were faced with a couple of problems. First, the 45&deg; angle was too steep to climb with normal means of traction. Second, without proper guides, the robot would fall off the ramp. So, we devised an ingenious solution that would solve both problems.</p>
+              <div class="mb-5"><p><img class="img-fluid img-lm-1 mb-4 mr-3" src="img/projects/2015legoman/1.1.jpg" alt="">This is a frontal view of the wheel design. It has sewing needles protruding from the inner wheel (smaller diameter) to give maximum grip into the wooden ramp, and has a ridge that allows a belt to transfer power from the rear wheels to the ones in the front. The outer wheel (larger diameter) is used to protect the spikes from being dulled when on the concrete floor, and serves as a guide when going up the ramp. The outer wheel also has a ridge to add a rubber tire to increase traction against smooth concrete. The following video shows that the wheel design worked well, and the robot successfully climbed the ramp.</p></div>
+              <div class="text-center">
+                <video class="img-fluid" controls="controls" width="850" name="Ramp Climbing" src="/img/projects/2015legoman/1.2.mp4"></video>
+              </div>
+              <p class="mt-4 mb-5">The second part of the challenge was to devise a method of capturing the lego and holding it. The lego was placed on a 1" tall wooden platform, so we needed a way of climbing onto that as well. We, once again, decided to have a single design to acomplish several tasks. Our design was inspired by bobcat bulldozer; these small machines often use their shovel not only for it’s obvious function, but also to lift itself above obstacles. To ensure that the lego would fall into the shovel we added a sweeping arm to knock the lego into place.</p>
+              <div class="text-center">
+                <video class="img-fluid" controls="controls" width="850" name="Ramp Climbing" src="/img/projects/2015legoman/2.2.mp4"></video>
+              </div>
+              <p class="mt-4"><img class="img-fluid img-lm-3" src="img/projects/2015legoman/3.png" alt="">The final challenge was to add a sensor that would enable this robot to operate autonomously. First, we needed a way to have the robot find its location relative to the course. The simplest way was to use the largest obstacle in the course &mdash; the large wall separating both sides of the course. By using a simple distance measurement to this wall we established the robot's orientation and distance relative to its plane. Scanning till the edge of the wall finalized its position. To improve accuracy with cheap and noisy sensors, we used linear regression to identify the orientation of the wall. To help reduce the the error in our sensors, the laser range sensors were mounted to a panning servo, as moving the entire robot would introduce more error into the measurements. This identified the robot’s positioning at the time of the scan, but between scans, we implemented dead reckoning with the use of a gyroscope, accelerometer, and empirical characterisation of the drive servos to update the robot’s location tracking. The panning sensor was equipped with a long range sensor used for positioning relative to the course and a short range sensor used to determine the position of the lego as the robot approached it.</p>
+              <p>Here are a few pictures of the complete robot.</p>
+              <div class="text-center">
+                <img class="img-fluid img-lm-4 mb-4 mr-3" src="img/projects/2015legoman/4.jpg" alt="">
+                <img class="img-fluid img-lm-5 mb-4 mr-3" src="img/projects/2015legoman/5.jpg" alt="">
+                <img class="img-fluid img-lm-6 mb-4 mr-3" src="img/projects/2015legoman/6.jpg" alt="">
+                <img class="img-fluid img-lm-7 mb-4 mr-3" src="img/projects/2015legoman/7.jpg" alt="">
+              </div>
               <p class="mb-5"></p>
 
               <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
