@@ -7,6 +7,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var filter = require('gulp-filter');
 var pkg = require('./package.json');
+var concat = require('gulp-concat');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -47,22 +48,7 @@ gulp.task('minify-css', ['sass'], function() {
 
 // Minify custom JS
 gulp.task('minify-js', function() {
-  return gulp.src('js/portfolio.js')
-    .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('js'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
-
-gulp.task('minify-js', function() {
-  return gulp.src('js/skillchart.js')
+  gulp.src(['js/portfolio.js'], ['js/skillchart.js'])
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg

@@ -18,6 +18,48 @@ body {
   font-family: 'Montserrat';
   -webkit-tap-highlight-color: #13283c80; }
 
+.loading-overlay {
+  z-index: 9999;
+  background-color: #2b2b2b;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -2rem 0 0 -2rem;
+  border: 0px solid #d7dde0;
+  border-radius: 50%;
+  border-top: 5px solid #265077;
+  width: 80px;
+  height: 80px;
+  webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite; }
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); } }
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s; }
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0; }
+  to { bottom:0px; opacity:1; } }
+@keyframes animatebottom {
+  from { bottom:-100px; opacity:0; }
+  to { bottom:0; opacity:1; } }
+
 /*.left-to-right {
     -webkit-transition: all 10s ease-in-out;
             transition: all 10s cubic-bezier(.190, 1.000, .220, 1.000) 0s;
