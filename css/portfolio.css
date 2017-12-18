@@ -304,7 +304,8 @@ header.masthead {
   float: left; }
 .img-lm-3 {
   width: 17rem;
-  float: right;}
+  display: block;
+  margin: auto; }
 .img-lm-4 {
   width: 25rem; }
 .img-lm-5 {
@@ -313,6 +314,10 @@ header.masthead {
   width: 25rem; }
 .img-lm-7 {
   width: 25rem; }
+@media (min-width: 576px) {
+  .img-lm-3 {
+    float: right; }
+}
 
 .img-dof-1 {
   width: 15rem;
