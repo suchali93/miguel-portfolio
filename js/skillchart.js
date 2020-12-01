@@ -51,8 +51,8 @@ var ctxLinux = $("#skill-canvas-linux");
 var cpp = 8;
 var python = 8;
 var java = 7;
-var matlab = 6;
-var bash = 6;
+var matlab = 5;
+var bash = 7;
 var linux = 8;
 
 var allbgcolors = ['#fd676095','#fd676095','#ffa05995','#ffa05995','#ffc15795','#ffc15795','#ffd54e95','#ffd54e95','#c7db3995','#c7db3995','#9ccc6495','#9ccc6495','#66bb6a95','#66bb6a95','#4db68995','#4db68995','#15b49395','#15b49395','#129d7595','#129d7595'];
