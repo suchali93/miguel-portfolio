@@ -44,16 +44,16 @@ Chart.pluginService.register({
 var ctxCpp = $("#skill-canvas-cpp");
 var ctxPython = $("#skill-canvas-python");
 var ctxJava = $("#skill-canvas-java");
-var ctxMatlab = $("#skill-canvas-matlab");
 var ctxBash = $("#skill-canvas-bash");
 var ctxLinux = $("#skill-canvas-linux");
+var ctxMatlab = $("#skill-canvas-matlab");
 
 var cpp = 8;
 var python = 8;
 var java = 7;
-var matlab = 5;
 var bash = 7;
 var linux = 7;
+var matlab = 5;
 
 var allbgcolors = ['#fd676095','#fd676095','#ffa05995','#ffa05995','#ffc15795','#ffc15795','#ffd54e95','#ffd54e95','#c7db3995','#c7db3995','#9ccc6495','#9ccc6495','#66bb6a95','#66bb6a95','#4db68995','#4db68995','#15b49395','#15b49395','#129d7595','#129d7595'];
 var bgcolor = ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff'];
@@ -82,14 +82,6 @@ for(var i=0; i<2*java; i++) {
 }
 datalistJava.push(10-java);
 
-var bgcolorMatlab = bgcolor.slice();
-var datalistMatlab = [];
-for(var i=0; i<2*matlab; i++) {
-  datalistMatlab[i] = 0.5;
-  bgcolorMatlab[i] = allbgcolors[i];
-}
-datalistMatlab.push(10-matlab);
-
 var bgcolorBash = bgcolor.slice();
 var datalistBash = [];
 for(var i=0; i<2*bash; i++) {
@@ -105,6 +97,14 @@ for(var i=0; i<2*linux; i++) {
   bgcolorLinux[i] = allbgcolors[i];
 }
 datalistLinux.push(10-linux);
+
+var bgcolorMatlab = bgcolor.slice();
+var datalistMatlab = [];
+for(var i=0; i<2*matlab; i++) {
+  datalistMatlab[i] = 0.5;
+  bgcolorMatlab[i] = allbgcolors[i];
+}
+datalistMatlab.push(10-matlab);
 
 var dataCpp = {
   datasets: [{
@@ -133,15 +133,6 @@ var dataJava = {
     hoverBackgroundColor: bgcolorJava,
     hoverBorderWidth: 0 }]
 };
-var dataMatlab = {
-  datasets: [{
-    label: 'Matlab',
-    data: datalistMatlab,
-    backgroundColor: bgcolorMatlab,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorMatlab,
-    hoverBorderWidth: 0 }]
-};
 var dataBash = {
   datasets: [{
     label: 'Bash',
@@ -158,6 +149,15 @@ var dataLinux = {
     backgroundColor: bgcolorLinux,
     borderWidth: 0,
     hoverBackgroundColor: bgcolorLinux,
+    hoverBorderWidth: 0 }]
+};
+var dataMatlab = {
+  datasets: [{
+    label: 'Matlab',
+    data: datalistMatlab,
+    backgroundColor: bgcolorMatlab,
+    borderWidth: 0,
+    hoverBackgroundColor: bgcolorMatlab,
     hoverBorderWidth: 0 }]
 };
 
@@ -208,13 +208,6 @@ var chartJava = new Chart(ctxJava, {
 });
 chartJava.options.elements.center.text = dataJava.datasets[0].label;
 
-var chartMatlab = new Chart(ctxMatlab, {
-    type: 'doughnut',
-    data: dataMatlab,
-    options: options
-});
-chartMatlab.options.elements.center.text = dataMatlab.datasets[0].label;
-
 var chartBash = new Chart(ctxBash, {
     type: 'doughnut',
     data: dataBash,
@@ -228,6 +221,13 @@ var chartLinux = new Chart(ctxLinux, {
     options: options
 });
 chartLinux.options.elements.center.text = dataLinux.datasets[0].label;
+
+var chartMatlab = new Chart(ctxMatlab, {
+  type: 'doughnut',
+  data: dataMatlab,
+  options: options
+});
+chartMatlab.options.elements.center.text = dataMatlab.datasets[0].label;
 
 // var chart7 = new Chart(ctx7, {
 //     type: 'doughnut',
