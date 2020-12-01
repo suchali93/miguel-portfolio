@@ -4,6 +4,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var merge = require('merge-stream');
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -32,7 +33,7 @@ gulp.task('minify-css', async function() {
 
 // Minify custom JS
 gulp.task('minify-js', async function() {
-  gulp.src(['js/portfolio.js'], ['js/skillchart.js'])
+  var portfolio = gulp.src('js/portfolio.js')
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg
@@ -41,9 +42,16 @@ gulp.task('minify-js', async function() {
       suffix: '.min'
     }))
     .pipe(gulp.dest('js'))
-    .pipe(browserSync.reload({
-      stream: true
+  var skillchart = gulp.src( 'js/skillchart.js')
+    .pipe(uglify())
+    .pipe(header(banner, {
+      pkg: pkg
     }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('js'))
+    return merge(portfolio, skillchart);
 });
 
 // Copy vendor files from /node_modules into /vendor
@@ -78,7 +86,7 @@ gulp.task('copy', async function() {
 })
 
 // Default task
-gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'copy'));
+gulp.task('default', gulp.parallel('minify-css', 'minify-js'));
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
