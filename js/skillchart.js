@@ -48,9 +48,9 @@ var ctxMatlab = $("#skill-canvas-matlab");
 var ctxBash = $("#skill-canvas-bash");
 var ctxLinux = $("#skill-canvas-linux");
 
-var cpp = 8.5;
-var python = 7.5;
-var java = 6;
+var cpp = 8;
+var python = 8;
+var java = 7;
 var matlab = 6;
 var bash = 6;
 var linux = 8;
