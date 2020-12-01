@@ -1,13 +1,10 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var filter = require('gulp-filter');
 var pkg = require('./package.json');
-var concat = require('gulp-concat');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -18,21 +15,8 @@ var banner = ['/*!\n',
   ''
 ].join('');
 
-// Compiles SCSS files from /scss into /css
-gulp.task('sass', function() {
-  return gulp.src('scss/portfolio.scss')
-    .pipe(sass())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(gulp.dest('css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
-
 // Minify compiled CSS
-gulp.task('minify-css', ['sass'], function() {
+gulp.task('minify-css', async function() {
   return gulp.src('css/portfolio.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
@@ -47,7 +31,7 @@ gulp.task('minify-css', ['sass'], function() {
 });
 
 // Minify custom JS
-gulp.task('minify-js', function() {
+gulp.task('minify-js', async function() {
   gulp.src(['js/portfolio.js'], ['js/skillchart.js'])
     .pipe(uglify())
     .pipe(header(banner, {
@@ -64,7 +48,7 @@ gulp.task('minify-js', function() {
 
 // Copy vendor files from /node_modules into /vendor
 // NOTE: requires `npm install` before running!
-gulp.task('copy', function() {
+gulp.task('copy', async function() {
   gulp.src([
       'node_modules/bootstrap/dist/**/*',
       '!**/npm.js',
@@ -94,7 +78,7 @@ gulp.task('copy', function() {
 })
 
 // Default task
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'copy'));
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -106,11 +90,10 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
-  gulp.watch('scss/*.scss', ['sass']);
+gulp.task('dev', gulp.series('browserSync', 'minify-css', 'minify-js', function() {
   gulp.watch('css/*.css', ['minify-css']);
   gulp.watch('js/*.js', ['minify-js']);
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/**/*.js', browserSync.reload);
-});
+}));
