@@ -41,135 +41,45 @@ Chart.pluginService.register({
   }
 });
 
-var ctxCpp = $("#skill-canvas-cpp");
-var ctxPython = $("#skill-canvas-python");
-var ctxJava = $("#skill-canvas-java");
-var ctxBash = $("#skill-canvas-bash");
-var ctxLinux = $("#skill-canvas-linux");
-var ctxMatlab = $("#skill-canvas-matlab");
+// Keep this in the order that they should show on the website
+const skills = ['cpp', 'python', 'java', 'bash', 'linux', 'matlab'];
 
-var cpp = 8;
-var python = 8;
-var java = 7;
-var bash = 7;
-var linux = 7;
-var matlab = 5;
-
-var allbgcolors = ['#fd676095','#fd676095','#ffa05995','#ffa05995','#ffc15795','#ffc15795','#ffd54e95','#ffd54e95','#c7db3995','#c7db3995','#9ccc6495','#9ccc6495','#66bb6a95','#66bb6a95','#4db68995','#4db68995','#15b49395','#15b49395','#129d7595','#129d7595'];
-var bgcolor = ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff'];
-
-var bgcolorCpp = bgcolor.slice();
-var datalistCpp = [];
-for(var i=0; i<2*cpp; i++) {
-  datalistCpp[i] = 0.5;
-  bgcolorCpp[i] = allbgcolors[i];
-}
-datalistCpp.push(10-cpp);
-
-var bgcolorPython = bgcolor.slice();
-var datalistPython = [];
-for(var i=0; i<2*python; i++) {
-  datalistPython[i] = 0.5;
-  bgcolorPython[i] = allbgcolors[i];
-}
-datalistPython.push(10-python);
-
-var bgcolorJava = bgcolor.slice();
-var datalistJava = [];
-for(var i=0; i<2*java; i++) {
-  datalistJava[i] = 0.5;
-  bgcolorJava[i] = allbgcolors[i];
-}
-datalistJava.push(10-java);
-
-var bgcolorBash = bgcolor.slice();
-var datalistBash = [];
-for(var i=0; i<2*bash; i++) {
-  datalistBash[i] = 0.5;
-  bgcolorBash[i] = allbgcolors[i];
-}
-datalistBash.push(10-bash);
-
-var bgcolorLinux = bgcolor.slice();
-var datalistLinux = [];
-for(var i=0; i<2*linux; i++) {
-  datalistLinux[i] = 0.5;
-  bgcolorLinux[i] = allbgcolors[i];
-}
-datalistLinux.push(10-linux);
-
-var bgcolorMatlab = bgcolor.slice();
-var datalistMatlab = [];
-for(var i=0; i<2*matlab; i++) {
-  datalistMatlab[i] = 0.5;
-  bgcolorMatlab[i] = allbgcolors[i];
-}
-datalistMatlab.push(10-matlab);
-
-var dataCpp = {
-  datasets: [{
+const skillDetails = {
+  'cpp': {
     label: 'C/C++',
-    data: datalistCpp,
-    backgroundColor: bgcolorCpp,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorCpp,
-    hoverBorderWidth: 0 }]
-};
-var dataPython = {
-  datasets: [{
+    id: 'skill-canvas-cpp',
+    score: 8, // out of 10
+  },
+  'python': {
     label: 'Python',
-    data: datalistPython,
-    backgroundColor: bgcolorPython,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorPython,
-    hoverBorderWidth: 0 }]
-};
-var dataJava = {
-  datasets: [{
+    id: 'skill-canvas-python',
+    score: 8, // out of 10
+  },
+  'java': {
     label: 'Java',
-    data: datalistJava,
-    backgroundColor: bgcolorJava,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorJava,
-    hoverBorderWidth: 0 }]
-};
-var dataBash = {
-  datasets: [{
+    id: 'skill-canvas-java',
+    score: 7, // out of 10
+  },
+  'bash': {
     label: 'Bash',
-    data: datalistBash,
-    backgroundColor: bgcolorBash,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorBash,
-    hoverBorderWidth: 0 }]
-};
-var dataLinux = {
-  datasets: [{
+    id: 'skill-canvas-bash',
+    score: 7, // out of 10
+  },
+  'linux': {
     label: 'Linux',
-    data: datalistLinux,
-    backgroundColor: bgcolorLinux,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorLinux,
-    hoverBorderWidth: 0 }]
-};
-var dataMatlab = {
-  datasets: [{
+    id: 'skill-canvas-linux',
+    score: 7, // out of 10
+  },
+  'matlab': {
     label: 'Matlab',
-    data: datalistMatlab,
-    backgroundColor: bgcolorMatlab,
-    borderWidth: 0,
-    hoverBackgroundColor: bgcolorMatlab,
-    hoverBorderWidth: 0 }]
-};
+    id: 'skill-canvas-matlab',
+    score: 5, // out of 10
+  },
+}
 
-// var data8 = {
-//   datasets: [{
-//     label: 'Linux',
-//     data: [9, 1],
-//     backgroundColor: ['#76323f','#fff'],
-//     borderWidth: 0,
-//     hoverBackgroundColor: ['#76323f' ,'#fff'],
-//     hoverBorderWidth: 0 }]
-// };
+// 10 colours
+var allbgcolors = ['#fd676095','#ffa05995','#ffc15795','#ffd54e95','#c7db3995','#9ccc6495','#66bb6a95','#4db68995','#15b49395','#129d7595'];
+var bgcolor = ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff'];
 
 var options = {
   tooltips: {
@@ -187,58 +97,26 @@ var options = {
   }
 };
 
-var chartCpp = new Chart(ctxCpp, {
-    type: 'doughnut',
-    data: dataCpp,
-    options: options
+skills.map((skill) => {
+  const skillScore = skillDetails[skill].score;
+  const skillColors = [...allbgcolors].splice(0, skillScore).concat(bgcolor);
+
+  const datalist = [...new Array(skillScore).fill(1), 10-skillScore];
+  var data = {
+    datasets: [{
+      label: skillDetails[skill].label,
+      data: datalist,
+      backgroundColor: skillColors,
+      borderWidth: 0,
+      hoverBackgroundColor: skillColors,
+      hoverBorderWidth: 0 
+    }]
+  };
+  
+  var chartCpp = new Chart($(`#${skillDetails[skill].id}`), {
+      type: 'doughnut',
+      data: data,
+      options: options, 
+  });
+  chartCpp.options.elements.center.text = data.datasets[0].label;
 });
-chartCpp.options.elements.center.text = dataCpp.datasets[0].label;
-
-var chartPython = new Chart(ctxPython, {
-    type: 'doughnut',
-    data: dataPython,
-    options: options
-});
-chartPython.options.elements.center.text = dataPython.datasets[0].label;
-
-var chartJava = new Chart(ctxJava, {
-    type: 'doughnut',
-    data: dataJava,
-    options: options
-});
-chartJava.options.elements.center.text = dataJava.datasets[0].label;
-
-var chartBash = new Chart(ctxBash, {
-    type: 'doughnut',
-    data: dataBash,
-    options: options
-});
-chartBash.options.elements.center.text = dataBash.datasets[0].label;
-
-var chartLinux = new Chart(ctxLinux, {
-    type: 'doughnut',
-    data: dataLinux,
-    options: options
-});
-chartLinux.options.elements.center.text = dataLinux.datasets[0].label;
-
-var chartMatlab = new Chart(ctxMatlab, {
-  type: 'doughnut',
-  data: dataMatlab,
-  options: options
-});
-chartMatlab.options.elements.center.text = dataMatlab.datasets[0].label;
-
-// var chart7 = new Chart(ctx7, {
-//     type: 'doughnut',
-//     data: data7,
-//     options: options
-// });
-// chart7.options.elements.center.text = data7.datasets[0].label;
-
-// var chart8 = new Chart(ctx8, {
-//     type: 'doughnut',
-//     data: data8,
-//     options: options
-// });
-// chart8.options.elements.center.text = data8.datasets[0].label;
