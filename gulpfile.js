@@ -94,10 +94,13 @@ gulp.task('copy-node', async function() {
     .pipe(gulp.dest('build/vendor/font-awesome'))
 })
 
-// Copy index.html into build
+// Copy index.html and assets into build
 gulp.task('copy-index', async function() {
   gulp.src('index.html')
     .pipe(gulp.dest('build/'))
+
+  gulp.src('assets/**/*')
+    .pipe(gulp.dest('build/assets'))
 })
 
 // Default task
