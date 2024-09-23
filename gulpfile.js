@@ -63,9 +63,9 @@ gulp.task('minify-js', async function() {
     return merge(portfolio, skillchart, jqBootstrapValidation);
 });
 
-// Copy vendor files from /node_modules into /vendor
+// Copy vendor files from /node_modules into build/vendor
 // NOTE: requires `npm install` before running!
-gulp.task('copy', async function() {
+gulp.task('copy-node', async function() {
   gulp.src([
       'node_modules/bootstrap/dist/**/*',
       '!**/npm.js',
@@ -94,8 +94,14 @@ gulp.task('copy', async function() {
     .pipe(gulp.dest('build/vendor/font-awesome'))
 })
 
+// Copy index.html into build
+gulp.task('copy-index', async function() {
+  gulp.src('index.html')
+    .pipe(gulp.dest('build/'))
+})
+
 // Default task
-gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'copy'));
+gulp.task('default', gulp.parallel('minify-css', 'minify-js', 'copy-node', 'copy-index'));
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
