@@ -1,0 +1,19 @@
+name: Trigger Deployment in Destination Repo
+
+on:
+  push:
+    branches:
+      - master  # Change if using a different branch
+  workflow_dispatch:
+
+jobs:
+  trigger-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Deployment
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.DESTINATION_PAT }}
+          repository: migdea11/migdea11.github.io
+          event-type: deploy
