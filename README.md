@@ -1,11 +1,11 @@
 #### Check out the finished website at https://migdea11.github.io/
-# Setup repo and publish new changes:
+
+# To publish new changes:
 
 - Clone repo
-- Install node modules with `npm ci`
+- Install deps: `npm ci`
+- Run app: `npm start`
 - Make required changes on `master` branch
-- Minify code with `npm run build`
-- Test locally by opening `index.html`
 - Commit changes
 - Push to `master`
-- Refresh site to see the changes
+- GitHub actions will automatically deploy latest changes to the site
