@@ -3,7 +3,7 @@ name: Trigger Deployment in Destination Repo
 on:
   push:
     branches:
-      - master  # Change if using a different branch
+      - master # Change if using a different branch
   workflow_dispatch:
 
 jobs:

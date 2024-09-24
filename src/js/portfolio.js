@@ -1,48 +1,56 @@
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Remove overlay when page is fully loaded
-  window.onload = function() {
+  window.onload = function () {
     $(".loading-overlay").hide();
-  }
+  };
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 70)
-        }, 1000, "easeInOutExpo");
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top - 70,
+          },
+          1000,
+          "easeInOutExpo"
+        );
         return false;
       }
     }
   });
 
   // Scroll to top button appear
-  $(document).scroll(function() {
+  $(document).scroll(function () {
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {
-      $('.scroll-to-top').fadeIn();
+      $(".scroll-to-top").fadeIn();
     } else {
-      $('.scroll-to-top').fadeOut();
+      $(".scroll-to-top").fadeOut();
     }
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
+  $(".js-scroll-trigger").click(function () {
+    $(".navbar-collapse").collapse("hide");
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 80
+  $("body").scrollspy({
+    target: "#mainNav",
+    offset: 80,
   });
 
   // Collapse Navbar
-  var navbarCollapse = function() {
+  var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
@@ -54,44 +62,44 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  // // Modal popup$(function () {
-  // $('.projects-item').magnificPopup({
-  //   type: 'inline',
-  //   preloader: false,
-  //   focus: '#username',
-  //   modal: true
-  // });
-  // $(document).on('click', '.projects-modal-dismiss', function(e) {
-  //   e.preventDefault();
-  //   $.magnificPopup.close();
-  // });
-
   // Floating label headings for the contact form
-  $(function() {
-    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-      $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-        $('#success').html("");
+  $(function () {
+    $("body")
+      .on("input propertychange", ".floating-label-form-group", function (e) {
+        $(this).toggleClass(
+          "floating-label-form-group-with-value",
+          !!$(e.target).val()
+        );
+        $("#success").html("");
         $("#sendMessageButton").attr("disabled", false);
         $("#sendMessageButton").removeClass("disabled");
-    }).on("focus", ".floating-label-form-group", function() {
-      $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function() {
-      $(this).removeClass("floating-label-form-group-with-focus");
-    });
+      })
+      .on("focus", ".floating-label-form-group", function () {
+        $(this).addClass("floating-label-form-group-with-focus");
+      })
+      .on("blur", ".floating-label-form-group", function () {
+        $(this).removeClass("floating-label-form-group-with-focus");
+      });
   });
 
-    // Success message for contact form
-    $(function () {
-      $("#name-field,#email-field,#message-field").not("[type=submit]").jqBootstrapValidation({
-        submitSuccess: function($form, event) {
+  // Success message for contact form
+  $(function () {
+    $("#name-field,#email-field,#message-field")
+      .not("[type=submit]")
+      .jqBootstrapValidation({
+        submitSuccess: function ($form, event) {
           console.log("Success");
           var name = $("input#name-field").val();
           $("#sendMessageButton").attr("disabled", true);
           $("#sendMessageButton").addClass("disabled");
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').append("<strong>Thank you, " + name + "! Your message has been sent. I will be in touch soon.</strong>");
-          $('#success > .alert-success').append('</div>');
-        }
+          $("#success").html("<div class='alert alert-success'>");
+          $("#success > .alert-success").append(
+            "<strong>Thank you, " +
+              name +
+              "! Your message has been sent. I will be in touch soon.</strong>"
+          );
+          $("#success > .alert-success").append("</div>");
+        },
       });
-    });
-  })(jQuery); // End of use strict
+  });
+})(jQuery); // End of use strict
