@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Freelancer v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/freelancer)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
- */
 ::selection {
    text-shadow: none;
    background: #13283c80; }
@@ -15,8 +10,16 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;;
   -webkit-tap-highlight-color: #13283c80; }
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
 
 .loading-overlay {
   z-index: 9999;
@@ -180,7 +183,7 @@ header.masthead {
     line-height: 3rem; }
   header.masthead h2 {
     font-size: 1.3rem;
-    font-family: 'Lato'; }
+  }
   header.masthead .intro-text {
     position: relative; }
 
@@ -250,30 +253,6 @@ header.masthead {
     bottom: -150px; }
     .projects .projects-item .projects-item-caption .caption-bg {
       background: #265077; } }
-
-.projects-modal .projects-modal-dialog {
-  padding: 3rem 1rem;
-  min-height: calc(100vh - 2rem);
-  margin: 1rem calc(1rem - 8px);
-  position: relative;
-  z-index: 2;
-  -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5); }
-  .projects-modal .projects-modal-dialog .close-button {
-    position: absolute;
-    top: 2rem;
-    right: 2rem; }
-    .projects-modal .projects-modal-dialog .close-button i {
-      line-height: 38px; }
-  .projects-modal .projects-modal-dialog h2 {
-    font-size: 2rem; }
-
-@media (min-width: 768px) {
-  .projects-modal .projects-modal-dialog {
-    min-height: 100vh;
-    padding: 5rem;
-    margin: 3rem calc(3rem - 8px); } }
 
 .about .img-circle {
   width: 9rem;

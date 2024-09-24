@@ -1,50 +1,41 @@
 {
-  "title": "Freelancer",
-  "name": "startbootstrap-freelancer",
-  "version": "4.0.0-beta.2",
-  "description": "A freelancer project HTML theme for Bootstrap.",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template-overviews/freelancer",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer/issues",
-    "email": "feedback@startbootstrap.com"
-  },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
+  "name": "miguel-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+    "url": "git+https://github.com/suchali93/miguel-portfolio.git"
   },
+  "keywords": [],
+  "author": "Suchali Tripathi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suchali93/miguel-portfolio/issues"
+  },
+  "homepage": "https://github.com/suchali93/miguel-portfolio#readme",
   "scripts": {
-    "build": "gulp"
+    "build": "webpack",
+    "start": "webpack serve --mode development"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^4.6.2",
     "font-awesome": "^4.7.0",
-    "gulp-uglifyes": "^0.2.1",
     "jquery": "^3.7.1",
-    "jquery.easing": "^1.4.1",
-    "magnific-popup": "^1.2.0",
-    "merge-stream": "^2.0.0"
+    "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
-    "browser-sync": "^3.0.3",
-    "gulp": "^5.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-filter": "^9.0.1",
-    "gulp-header": "^1.8.9",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2"
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^9.2.1",
+    "chart.js": "^4.4.4",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }

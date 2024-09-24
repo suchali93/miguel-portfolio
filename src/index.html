@@ -10,22 +10,8 @@
 
     <title>Miguel de Arcos</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/portfolio.min.css" rel="stylesheet">
-
-    <!-- Logo icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logoicon.png">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
     <!-- Website analytics script -->
     <!-- <script>
@@ -88,21 +74,50 @@
         <hr class="hr-dark mb-5">
         <div class="row">
           <div class="col-md-4 col-lg-4">
-            <a class="projects-item d-block mx-auto" href="#projects-modal-1">
+            <a 
+              class="projects-item d-block mx-auto"
+              href="#"
+              data-toggle="modal"
+              data-target="#projects-modal-1"
+            >
               <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
               </div>
               <img class="img-fluid" id="selfbalancing" src="assets/img/projects/2017selfbalancing/top.png" alt="">
               <div class="projects-item-caption">
                 <div class="caption-text">
                   <div class="text-title">Self-Balancing Autonomous Robot</div>
-                  <span class="text-category">Current Project</span>
+                  <span class="text-category">2017</span>
                 </div>
                 <div class="caption-bg"></div>
               </div>
             </a>
           </div>
           <div class="col-md-4 col-lg-4">
-            <a class="projects-item d-block mx-auto" href="#projects-modal-2">
+            <a 
+              class="projects-item d-block mx-auto"
+              href="#"
+              data-toggle="modal"
+              data-target="#projects-modal-3"
+            >
+              <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
+              </div>
+              <img class="img-fluid pt-3" id="sixdegrees" src="assets/img/projects/2016sixdegrees/top.png" alt="">
+              <div class="projects-item-caption">
+                <div class="caption-text">
+                  <div class="text-title">Six Degrees of Freedom Controller</div>
+                  <span class="text-category">2016</span>
+                </div>
+                <div class="caption-bg"></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <a 
+              class="projects-item d-block mx-auto"
+              href="#"
+              data-toggle="modal"
+              data-target="#projects-modal-2"
+            >
               <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
               </div>
               <img class="img-fluid" id="legoman" src="assets/img/projects/2015legoman/top.png" alt="">
@@ -110,20 +125,6 @@
                 <div class="caption-text">
                   <div class="text-title">Lego Man Retrieval Robot</div>
                   <span class="text-category">2015</span>
-                </div>
-                <div class="caption-bg"></div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 col-lg-4">
-            <a class="projects-item d-block mx-auto" href="#projects-modal-3">
-              <div class="projects-item-overlay d-flex position-absolute h-100 w-100">
-              </div>
-              <img class="img-fluid" id="sixdegrees" src="assets/img/projects/2016sixdegrees/top.png" alt="">
-              <div class="projects-item-caption">
-                <div class="caption-text">
-                  <div class="text-title">Six Degrees of Freedom Controller</div>
-                  <span class="text-category">2016</span>
                 </div>
                 <div class="caption-bg"></div>
               </div>
@@ -143,17 +144,12 @@
             <img class="img-circle" src="assets/img/profile.jpg" alt="">
           </div>
           <div class="col-lg-8 col-md-8 mt-3 mr-auto about-me-details">
-            I'm a Mechatronics engineer with a BASc from the University of Waterloo and over 3 years of work experience. I enjoy experimenting with my Raspberry Pi to build new and exciting projects. In my spare time, I love to do photography and explore websites like <a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810?utm_medium=referral&utm_campaign=api" target="_blank">Udacity</a> to learn more about subjects that pique my curiosity.
+            I'm a Mechatronics engineer with a BASc from the University of Waterloo and over 8 years of work experience. I enjoy experimenting with my Raspberry Pi to build new and exciting projects. In my spare time, I love to do photography and explore websites like <a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810?utm_medium=referral&utm_campaign=api" target="_blank">Udacity</a> to learn more about subjects that pique my curiosity.
             <div class="ml-2 mt-4">
               <ul class="list-inline">
                 <li class="list-inline-item mr-4">
                   <a href="https://www.linkedin.com/in/miguel-de-arcos-34b03349/" target="_blank">
                     <i class="fa fa-linkedin btn-social-dark"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item mr-4">
-                  <a href="https://www.instagram.com/migdea/" target="_blank">
-                    <i class="fa fa-instagram btn-social-dark"></i>
                   </a>
                 </li>
                 <li class="list-inline-item mr-4">
@@ -176,7 +172,7 @@
         <!-- To add a skill, add another canvas as below, and modify skillchart.js -->
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
-            I have over 5 years of experience working in the tech industry, through several co-ops and permanent positions. Below is a quick summary of some of the projects I worked at Sandvine and Vital Images as well as a list of some of my strongest skills. For a more detailed description of my work experience, please refer to my resume.
+            I have over 8 years of experience working in the tech industry, through several co-ops and full-time positions. Below is a quick summary of some of the projects I've worked on over the years, as well as a list of some of my strongest skills. For a more detailed description of my work experience, please refer to my resume.
             <div class="my-4">
               <a class="btn btn-primary btn-xl" href="assets/resume.pdf" target="_blank">
                 View Resume
@@ -186,12 +182,34 @@
         </div>
         <div class="row my-5 pt-3">
           <div class="col-lg-2 col-md-4 ml-auto my-auto">
-            <img class="img-square mb-4" src="assets/img/work/vital.png" alt="">
+            <img class="img-square mb-4" src="assets/img/work/exscientia.png" alt="">
           </div>
           <div class="col-lg-8 col-md-8 mr-auto recent-job-details">
-            <h5>Vital Images</h5>
+            <h5>Exscientia</h5>
+            <strong>Senior Software Engineer</strong> (2023 - 2024)
+            <p>At Exscientia AI, I played a pivotal role in laying the technical foundation for an emerging SPR machine project, applying my extensive engineering expertise to enhance system design and functionality from the ground up.</p>
+
+          </div>
+        </div>
+        <div class="row my-5 pt-3">
+          <div class="col-lg-2 col-md-4 ml-auto my-auto">
+            <img class="img-square mb-4" src="assets/img/work/nicoya.png" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 mr-auto recent-job-details">
+            <h5>Nicoya</h5>
+            <strong>Staff Software Engineer</strong> (2021 - 2023)
+            <p>As a Staff Software Engineer at Nicoya Lifescience, I led significant firmware and software development projects for an SPR machine using DMF technology, greatly enhancing both system performance and reliability.</p>
+
+          </div>
+        </div>
+        <div class="row my-5 pt-3">
+          <div class="col-lg-2 col-md-4 ml-auto my-auto">
+            <img class="img-square mb-4" src="assets/img/work/canon.png" alt="">
+          </div>
+          <div class="col-lg-8 col-md-8 mr-auto recent-job-details">
+            <h5>Canon Medical Informatics</h5>
             <strong>Software Engineer</strong> (2018 - 2020)
-            <p>At Vital Images, I designed and implemented a FHIR based data model, RESTful APIs, and HL7 ingestion for a healthcare informatics system. I demonstrated leadership as a mentor, and contributed to the system's architecture. Being a subject matter expert for various parts of the product, I coordinated the development of various designs including my own.</p>
+            <p>At Canon, I designed and implemented a FHIR based data model, RESTful APIs, and HL7 ingestion for a healthcare informatics system. I demonstrated leadership as a mentor, and contributed to the system's architecture. Being a subject matter expert for various parts of the product, I coordinated the development of various designs including my own.</p>
 
           </div>
         </div>
@@ -272,64 +290,39 @@
             </div>
           </div>
         </div>
-        <!-- <div class="row">
-          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 col-6 text-center">
-            <img class="img-bw img-small" src="assets/img/work/work6.jpg" alt="">
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 col-6 text-center">
-            <img class="img-bw img-small" src="assets/img/work/work5.jpg" alt="">
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 col-6 text-center">
-            <img class="img-bw img-small" src="assets/img/work/work4.jpg" alt="">
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 col-6 text-center">
-            <img class="img-bw img-small" src="assets/img/work/work3.jpg" alt="">
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 col-6 text-center">
-            <img class="img-bw img-small" src="assets/img/work/work2.jpg" alt="">
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 mt-5 mb-3 col-6 text-center">
-            <img class="img-bw img-small" src="assets/img/work/work1.jpg" alt="">
-          </div>
-        </div> -->
       </div>
     </section>
 
-    <!-- Contact Footer -->
+    <!-- Contact Form -->
     <section class="contact" id="contact">
       <div class="container">
         <h2 class="text-center text-primary mb-0">Contact Me</h2>
         <hr class="hr-light mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <!--
-            Name = entry.2005620554
-            Email = entry.1045781291
-            Message = entry.1065046570
-            -->
             <form name="sentMessage" id="contactForm" novalidate="" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdi15J6wIn4RUQcC_2okuNlpdfe_1lu7m4di7aXWJ3lrL-8vQ/formResponse" target="hidden_iframe">
               <div class="control-group"  id="name">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Name</label>
-                  <input class="form-control name-field" type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" required="required" data-validation-required-message="Please enter your name.">
+                  <input class="form-control" type="text" placeholder="Name" name="entry.2005620554" id="name-field" data-validation-required-message="Please enter your name." required>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group" id="email">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Email Address</label>
-                  <input class="form-control" type="email" placeholder="Email Address" name="entry.1045781291" id="entry.1045781291" required="required" data-validation-required-message="Please enter your email address.">
+                  <input class="form-control" type="email" placeholder="Email Address" name="entry.1045781291" id="email-field" data-validation-required-message="Please enter your email address." required>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group" id="message">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                   <label>Message</label>
-                  <textarea class="form-control" rows="5" placeholder="Message" name="entry.1065046570" id="entry.1065046570" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <textarea class="form-control" rows="5" placeholder="Message" name="entry.1065046570" id="message-field" data-validation-required-message="Please enter a message." required></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <br>
+              <br />
               <div id="success"></div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
@@ -344,7 +337,7 @@
     <footer class="footer text-center">
       <div class="copyright py-4 text-center text-muted">
         <div class="container">
-          <small>Copyright &copy; Miguel de Arcos 2020</small>
+          <small>Copyright &copy; Miguel de Arcos 2024</small>
         </div>
       </div>
     </footer>
@@ -360,16 +353,26 @@
     <!-- Project Modals -->
 
     <!-- Project Modal 1 -->
-    <div class="projects-modal mfp-hide" id="projects-modal-1">
-      <div class="projects-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block projects-modal-dismiss" href="#">
-          <i class="fa fa-2x fa-times"></i>
-        </a>
-        <div class="container">
-          <div class="row">
+    <div
+      class="modal fade"
+      id="projects-modal-1"
+      aria-labelledby="projectsModalLabel1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="row py-5">
             <div class="col-lg-11 mx-auto">
-              <h2 class="text-secondary mb-0 text-center">Self-Balancing Autonomous Robot</h2>
+              <h2 class="text-secondary mb-0 text-center" id="projectsModalLabel1">Self-Balancing Autonomous Robot</h2>
               <hr class="hr-dark">
+              <button
+                type="button"
+                class="close position-absolute right-0 top-0"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+              </button>
               <img class="img-fluid" src="assets/img/projects/2017selfbalancing/top.png" alt="">
               <p>The goal of this project is to make a platform that I can use to implement what I am learning in an online course on computer vision, as well as expand upon the concepts of control theory and autonomous robotics that I previously learned at school.</p>
               <p>Since I want the robot to perform tasks using computer vision, I selected the Raspberry Pi to act as the brain. The other microcontroller I have is an arduino, but it wouldn’t be practical to attempt any image processing on this platform. It is also favourable to use the Pi, since most navigating and path planning algorithms would most likely be more than the Arduino could handle.</p>
@@ -384,28 +387,42 @@
               <div class="text-center">
                 <img class="img-fluid img-sb-4" src="assets/img/projects/2017selfbalancing/4.png" alt="">
               </div>
-              <p class="mb-5"></p>
-
-              <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Project Modal 2 -->
-    <div class="projects-modal mfp-hide" id="projects-modal-2">
-      <div class="projects-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block projects-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container">
-          <div class="row">
+    <div
+      class="modal fade"
+      id="projects-modal-2"
+      aria-labelledby="projectsModalLabel2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="row py-5">
             <div class="col-lg-11 mx-auto">
               <h2 class="text-secondary mb-0 text-center">Lego Man Retrieval Robot</h2>
               <hr class="hr-dark mb-5">
+              <button
+                type="button"
+                class="close position-absolute right-0 top-0"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+              </button>
               <img class="img-fluid img-lm" src="assets/img/projects/2015legoman/top.png" alt="">
               <p>The objective of this project was to create a device that could retrieve a skier (lego man) stranded on the opposite side of a mountain (a wooden ramp with a 45&deg; incline). The device needed to autonomously navigate the course, find and retrieve the lego, and then return to the starting point.</p>
               <p>Our solution was to make a robot with tracks that could climb the ramp. However, we were faced with a couple of problems. First, the 45&deg; angle was too steep to climb with normal means of traction. Second, without proper guides, the robot would fall off the ramp. So, we devised an ingenious solution that would solve both problems.</p>
@@ -425,28 +442,42 @@
                 <img class="img-fluid img-lm-6 mb-4 mr-3" src="assets/img/projects/2015legoman/6.jpg" alt="">
                 <img class="img-fluid img-lm-7 mb-4 mr-3" src="assets/img/projects/2015legoman/7.jpg" alt="">
               </div>
-              <p class="mb-5"></p>
-
-              <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Project Modal 3 -->
-    <div class="projects-modal mfp-hide" id="projects-modal-3">
-      <div class="projects-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block projects-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container">
-          <div class="row">
+    <div
+      class="modal fade"
+      id="projects-modal-3"
+      aria-labelledby="projectsModalLabel3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="row py-5">
             <div class="col-lg-11 mx-auto">
               <h2 class="text-secondary mb-0 text-center">Six Degrees of Freedom Controller</h2>
               <hr class="hr-dark mb-5">
+              <button
+                type="button"
+                class="close position-absolute right-0 top-0"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+              </button>
               <img class="img-fluid mb-5" src="assets/img/projects/2016sixdegrees/top.png" alt="">
               <p style="clear:both;"><img class="img-fluid img-dof-1" src="assets/img/projects/2016sixdegrees/1.png" alt="">In 3D space, there are 6 degrees of freedom for any object &mdash; 3 translational degrees and 3 rotational. Typically, to control these 6 degrees, two joysticks are used, each offering control over 3 degrees. However, this isn’t as intuitive as manipulating the object directly.</p>
               <p>To simplify the problem, we chose to have different mechanisms to read the two separate types of motion. The first was the translational movements; we used a gantry system to track the input. In order for the system to be operated smoothly, we used linear rails which are used for CNC machines.</p>
@@ -476,34 +507,23 @@
                 <img class="img-fluid img-dof-8 mb-3" src="assets/img/projects/2016sixdegrees/8.png" alt="">
                 <img class="img-fluid img-dof-9" src="assets/img/projects/2016sixdegrees/9.png" alt="">
               </div>
-              <p class="mb-5">The device is much smaller than you would think based on the image; the entire mechanism fits within 10x10 inches. This was done because the controller is meant to take similar real estate on a desk as a mouse pad would.</p>
-
-              <a class="btn btn-primary btn-lg rounded-pill projects-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
+              <p>The device is much smaller than you would think based on the image; the entire mechanism fits within 10x10 inches. This was done because the controller is meant to take similar real estate on a desk as a mouse pad would.</p>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- CDN for Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/portfolio.min.js"></script>
-    <script src="js/skillchart.min.js"></script>
+    <script src="js/main.min.js"></script>
 
     <!-- Website analytics script -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -515,8 +535,6 @@
 
       gtag('config', 'UA-111341867-1');
     </script>
-
-
   </body>
 
 </html>
