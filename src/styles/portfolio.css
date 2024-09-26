@@ -157,9 +157,9 @@ section h2 {
   padding-bottom: 1rem;
   background-color: #265077;
 }
-#mainNav .navbar-brand-logo > img {
+#mainNav .navbar-brand-logo {
   width: auto;
-  height: 2.5rem;
+  height: 3rem;
   margin-right: 0.8rem;
 }
 #mainNav .navbar-brand {
