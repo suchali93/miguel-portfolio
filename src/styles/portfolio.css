@@ -335,6 +335,14 @@ header.masthead .intro-text {
     background: #265077;
   }
 }
+@media (max-width: 767px) {
+  .img-max-width {
+    max-width: 50%;
+  }
+  .close {
+    top: -35px;
+  }
+}
 
 .about .img-circle {
   width: 9rem;
