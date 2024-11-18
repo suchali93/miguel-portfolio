@@ -1,4 +1,4 @@
-#### Check out the finished website at https://migdea11.github.io/
+#### Check out the finished project: [Portfolio Website](https://migdea11.github.io/)
 
 # To publish new changes:
 
