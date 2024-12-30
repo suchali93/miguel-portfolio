@@ -9,9 +9,9 @@
 - Push to `master`
 - GitHub actions will automatically deploy latest changes to the site (unless PA tokens expire)
 
-If source repo token expires:
+If source (or destination) repo token expires:
 
-- Login to Source User > Settings > Developer Settings > Personal access tokens > Tokens (classic)
+- Login to Source (Destination) User > Settings > Developer Settings > Personal access tokens > Tokens (classic)
 - Click on the token name > Regenerate token > Copy new token
-- Login to Destination User > Repo > Settings > Secrets and variables > Actions
-- Edit the Source token > Paste new token
+- Login to Destination (Source) User > Repo > Settings > Secrets and variables > Actions
+- Edit the Source (Destination) token > Paste new token
