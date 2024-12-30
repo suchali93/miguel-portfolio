@@ -355,6 +355,18 @@ header.masthead .intro-text {
   }
 }
 
+.modal-xxl {
+  max-width: 80%;
+}
+@media (max-width: 576px) {
+  .modal-xxl {
+    max-width: 100%;
+  }
+}
+.img-top {
+  max-height: 550px;
+}
+
 .img-sb-1 {
   width: 20rem;
   float: left;
@@ -374,7 +386,7 @@ header.masthead .intro-text {
   margin-top: -4rem;
 }
 .img-lm-1 {
-  width: 12rem;
+  width: 10rem;
   float: left;
 }
 .img-lm-2 {
@@ -405,7 +417,7 @@ header.masthead .intro-text {
 }
 
 .img-dof-1 {
-  width: 10rem;
+  width: 15rem;
   float: right;
 }
 .img-dof-2 {
@@ -419,7 +431,13 @@ header.masthead .intro-text {
 }
 .img-dof-5 {
   width: 26rem;
-  float: left;
+  vertical-align: baseline;
+  margin-right: 3rem;
+}
+@media (max-width: 767px) {
+  .img-dof-5 {
+    margin: 0;
+  }
 }
 .img-dof-6 {
   width: 30rem;
