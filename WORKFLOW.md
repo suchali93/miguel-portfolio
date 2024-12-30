@@ -1,6 +1,7 @@
 # To publish new changes:
 
 - Clone repo
+- Already have a local copy? Pull latest changes: `git pull`
 - Install deps: `npm ci`
 - Run app: `npm start`
 - Make required changes on `master` branch
